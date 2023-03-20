@@ -1,24 +1,55 @@
 package com.ConstellationLogger.dao;
 
 import com.ConstellationLogger.dto.Constellation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
 public class ConstellationDaoDB implements ConstellationDao {
+
+    @Autowired
+    JdbcTemplate jdbc;
+
+
     @Override
-    public Constellation getConstellationByAbbr(String abbr) {
-        return null;
+    public Constellation getConstellationByAbbr(String abbr) throws DataBaseException {
+        try {
+
+            //SQL query to get all Constellation with Abbr = abbr
+            final String SELECT_CONSTELLATION_BY_ABBR = "SELECT * FROM constellations WHERE Abbr= ?";
+            //returns Constellation objects
+            return jdbc.queryForObject(SELECT_CONSTELLATION_BY_ABBR, new ConstellationMapper(), abbr);
+        }catch (DataAccessException e){
+            throw new DataBaseException("Constellation not in DataBase",e);
+        }
     }
 
     @Override
     public List<Constellation> getConstellationByMonth(int month) {
-        return null;
+            //SQL query to get all Constellation with conMonth = month
+            final String SELECT_CONSTELLATION_BY_MONTH = "SELECT * FROM constellations WHERE conMonth= ?";
+            //returns a List of Constellation objects
+            return jdbc.query(SELECT_CONSTELLATION_BY_MONTH, new ConstellationMapper(), month);
+    }
+
+    @Override
+    public List<Constellation> getConstellationByLat(double lat) {
+        //SQL query to get all Constellation with a lat between maxLat and minLat
+        final String SELECT_CONSTELLATION_BY_LAT = "SELECT * FROM constellations" +
+                " (maxLat >= ?  AND    minLat <= ?)";
+        //returns a List of Constellation objects
+        return jdbc.query(SELECT_CONSTELLATION_BY_LAT, new ConstellationMapper(), lat,lat);
     }
 
     @Override
     public List<Constellation> getAllConstellations() {
-        return null;
+        //SQL query to get all the Constellation
+        final String SELECT_ALL_CONSTELLATION = "SELECT * FROM constellations";
+        //returns a List of Constellation objects of all Constellation
+        return jdbc.query(SELECT_ALL_CONSTELLATION, new ConstellationMapper());
     }
 }
