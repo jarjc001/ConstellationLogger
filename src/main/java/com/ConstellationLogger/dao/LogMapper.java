@@ -14,13 +14,9 @@ public final class LogMapper implements RowMapper<Log> {
         log.setLogId(rs.getInt("logId"));
         log.setLogDate(rs.getDate("logDate").toLocalDate());
 
-       // log.setLogDate();    check to see if works
-
-        //write extra
-
-
-        log.setUser(rs.getString("username"));
-        log.setLocationId(rs.getInt("locationId"));
+          //write extra
+        log.setLocationName(rs.getString("locationName"));
+        log.setLat(rs.getDouble("lat"));
         log.setExtraInfo(rs.getString("extraInfo"));
 
         return log;

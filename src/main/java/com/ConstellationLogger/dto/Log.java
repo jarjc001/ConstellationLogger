@@ -8,7 +8,7 @@ public class Log {
     private int logId;
     private LocalDate logDate;
     private User user;
-    private int locationId;
+
     private List<Constellation> constellationList;
     private String extraInfo;
 
@@ -20,7 +20,6 @@ public class Log {
         this.logId = logId;
         this.logDate = logDate;
         this.user = user;
-        this.locationId = locationId;
         this.constellationList = constellationList;
         this.extraInfo = extraInfo;
         this.locationName = locationName;
@@ -40,9 +39,7 @@ public class Log {
     public User getUser() {
         return user;
     }
-    public int getLocationId() {
-        return locationId;
-    }
+
     public List<Constellation> getConstellationList() {
         return constellationList;
     }
@@ -66,9 +63,7 @@ public class Log {
     public void setUser(User user) {
         this.user = user;
     }
-    public void setLocationId(int locationId) {
-        this.locationId = locationId;
-    }
+
     public void setConstellationList(List<Constellation> constellationList) {
         this.constellationList = constellationList;
     }
@@ -88,7 +83,6 @@ public class Log {
                 "logId=" + logId +
                 ", logDate=" + logDate +
                 ", username='" + user + '\'' +
-                ", locationId=" + locationId +
                 ", constellationList=" + constellationList +
                 ", extraInfo='" + extraInfo + '\'' +
                 ", locationName='" + locationName + '\'' +

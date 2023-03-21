@@ -13,7 +13,7 @@ public interface LogDao {
      * @param logId log id
      * @return Log Object
      */
-    Log getLogById (int logId);
+    Log getLogById (int logId) throws DataBaseException;
 
     /**Get the log info from the date and the username
      * @param date log date

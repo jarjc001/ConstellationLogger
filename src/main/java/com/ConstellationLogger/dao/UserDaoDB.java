@@ -43,9 +43,7 @@ public class UserDaoDB implements UserDao{
                 user.getEmail(),
                 user.getPremium());
 
-
-
-        return null;
+        return user;
     }
 
     @Override
@@ -60,7 +58,6 @@ public class UserDaoDB implements UserDao{
     }
 
     @Override
-    @Transactional
     public void updateUser(User user) {
         final String UPDATE_USER = "UPDATE users SET password = ?, userFirstName = ?," +
                 " userLastName = ?, email = ?, premium =? WHERE username = ?";
@@ -77,7 +74,7 @@ public class UserDaoDB implements UserDao{
     @Transactional
     public void deleteUser(String username, String password) {
         //SQL query to delete from constellations log db
-        final String DELETE_CONSTELLATION_LOG ="DELETE cl.* FROM constellationslog cl " +
+        final String DELETE_CONSTELLATION_LOG ="DELETE cl.* FROM constellationsLog cl " +
                 "JOIN log l ON cl.logId = l.logId WHERE l.username = ?";
         jdbc.update(DELETE_CONSTELLATION_LOG, username);
 
