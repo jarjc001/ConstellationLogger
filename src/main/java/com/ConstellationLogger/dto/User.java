@@ -38,7 +38,8 @@ public class User {
     public String getEmail() {
         return email;
     }
-    public boolean isPremium() {
+
+    public boolean getPremium() {
         return premium;
     }
 

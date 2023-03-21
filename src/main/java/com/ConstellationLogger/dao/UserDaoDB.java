@@ -1,27 +1,91 @@
 package com.ConstellationLogger.dao;
 
+import com.ConstellationLogger.dto.Constellation;
 import com.ConstellationLogger.dto.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public class UserDaoDB implements UserDao{
+
+    @Autowired
+    JdbcTemplate jdbc;
+
     @Override
-    public User getUserByLogin(String username, String password) {
+    public User getUserByLogin(String username, String password) throws DataBaseException {
+        User user = new User();
+
+        //SQL query to get all Constellation with Abbr = abbr
+        final String SELECT_USER_BY_USERNAME_AND_PASSWORD = "SELECT * FROM users WHERE (username= ? AND password= ?);";
+        //returns Constellation objects
+        user = jdbc.queryForObject(SELECT_USER_BY_USERNAME_AND_PASSWORD, new UserMapper(), username, password);
+        if(user == null){
+            throw new DataBaseException("Login Details INCORRECT");
+        }
+        return user;
+    }
+
+    @Override
+    public User addUser(User user) throws DataBaseException{
+        //checks if user is taken
+        checkUsernameInDataBase(user.getUsername());
+
+        final String INSERT_USER = "INSERT INTO users INSERT INTO" +
+                " users(username, password, userFirstName, userLastName, email, premium)" +
+                " VALUES (?,?,?,?,?,?)";
+        jdbc.update(INSERT_USER,
+                user.getUsername(),
+                user.getPassword(),
+                user.getUserFirstName(),
+                user.getUserLastName(),
+                user.getEmail(),
+                user.getPremium());
+
+
+
         return null;
     }
 
     @Override
-    public User addUser(User user) {
-        return null;
+    public void checkUsernameInDataBase(String username) throws DataBaseException {
+        User user =new User();
+        final String CHECK_USER_NAME = "SELECT * FROM users WHERE username = ?";
+        user = jdbc.queryForObject(CHECK_USER_NAME, new UserMapper(), username);
+
+        if(user != null){
+            throw new DataBaseException("Username already Taken");
+        }
     }
 
     @Override
+    @Transactional
     public void updateUser(User user) {
-
+        final String UPDATE_USER = "UPDATE users SET password = ?, userFirstName = ?," +
+                " userLastName = ?, email = ?, premium =? WHERE username = ?";
+        jdbc.update(UPDATE_USER,
+                user.getPassword(),
+                user.getUserFirstName(),
+                user.getUserLastName(),
+                user.getEmail(),
+                user.getPremium(),
+                user.getUsername());
     }
 
     @Override
+    @Transactional
     public void deleteUser(String username, String password) {
+        //SQL query to delete from constellations log db
+        final String DELETE_CONSTELLATION_LOG ="DELETE cl.* FROM constellationslog cl " +
+                "JOIN log l ON cl.logId = l.logId WHERE l.username = ?";
+        jdbc.update(DELETE_CONSTELLATION_LOG, username);
 
+        //SQL query to delete from log db
+        final String DELETE_LOG ="DELETE FROM log WHERE username = ?";
+        jdbc.update(DELETE_LOG, username);
+
+        final String DELETE_USER = "DELETE FROM users WHERE (username = ? AND password = ?)";
+        jdbc.update(DELETE_USER, username, password);
     }
 }

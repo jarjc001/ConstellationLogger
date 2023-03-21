@@ -6,6 +6,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.sql.SQLException;
 import java.util.List;
 
 @Repository
@@ -17,15 +18,16 @@ public class ConstellationDaoDB implements ConstellationDao {
 
     @Override
     public Constellation getConstellationByAbbr(String abbr) throws DataBaseException {
-        try {
+        Constellation con = new Constellation();
 
-            //SQL query to get all Constellation with Abbr = abbr
-            final String SELECT_CONSTELLATION_BY_ABBR = "SELECT * FROM constellations WHERE Abbr= ?";
-            //returns Constellation objects
-            return jdbc.queryForObject(SELECT_CONSTELLATION_BY_ABBR, new ConstellationMapper(), abbr);
-        }catch (DataAccessException e){
-            throw new DataBaseException("Constellation not in DataBase",e);
+        //SQL query to get all Constellation with Abbr = abbr
+        final String SELECT_CONSTELLATION_BY_ABBR = "SELECT * FROM constellations WHERE Abbr= ?";
+        //returns Constellation objects
+        con = jdbc.queryForObject(SELECT_CONSTELLATION_BY_ABBR, new ConstellationMapper(), abbr);
+        if(con == null){
+            throw new DataBaseException("Constellation not in DataBase");
         }
+        return con;
     }
 
     @Override
@@ -40,7 +42,7 @@ public class ConstellationDaoDB implements ConstellationDao {
     public List<Constellation> getConstellationByLat(double lat) {
         //SQL query to get all Constellation with a lat between maxLat and minLat
         final String SELECT_CONSTELLATION_BY_LAT = "SELECT * FROM constellations" +
-                " (maxLat >= ?  AND    minLat <= ?)";
+                "WHERE (maxLat >= ?  AND    minLat <= ?)";
         //returns a List of Constellation objects
         return jdbc.query(SELECT_CONSTELLATION_BY_LAT, new ConstellationMapper(), lat,lat);
     }

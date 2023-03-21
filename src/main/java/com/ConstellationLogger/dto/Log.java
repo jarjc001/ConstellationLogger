@@ -7,19 +7,24 @@ public class Log {
 
     private int logId;
     private LocalDate logDate;
-    private String username;
+    private User user;
     private int locationId;
     private List<Constellation> constellationList;
     private String extraInfo;
 
+    private String locationName;
+    private double lat;
 
-    public Log(int logId, LocalDate logDate, String username, int location, List<Constellation> constellationList, String extraInfo) {
+
+    public Log(int logId, LocalDate logDate, User user, int locationId, List<Constellation> constellationList, String extraInfo, String locationName, double lat) {
         this.logId = logId;
         this.logDate = logDate;
-        this.username = username;
-        this.locationId = location;
+        this.user = user;
+        this.locationId = locationId;
         this.constellationList = constellationList;
         this.extraInfo = extraInfo;
+        this.locationName = locationName;
+        this.lat = lat;
     }
 
     public Log() {
@@ -32,8 +37,8 @@ public class Log {
     public LocalDate getLogDate() {
         return logDate;
     }
-    public String getUsername() {
-        return username;
+    public User getUser() {
+        return user;
     }
     public int getLocationId() {
         return locationId;
@@ -44,7 +49,12 @@ public class Log {
     public String getExtraInfo() {
         return extraInfo;
     }
-
+    public String getLocationName() {
+        return locationName;
+    }
+    public double getLat() {
+        return lat;
+    }
     //setters
 
     public void setLogId(int logId) {
@@ -53,8 +63,8 @@ public class Log {
     public void setLogDate(LocalDate logDate) {
         this.logDate = logDate;
     }
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUser(User user) {
+        this.user = user;
     }
     public void setLocationId(int locationId) {
         this.locationId = locationId;
@@ -65,17 +75,24 @@ public class Log {
     public void setExtraInfo(String extraInfo) {
         this.extraInfo = extraInfo;
     }
-
+    public void setLocationName(String locationName) {
+        this.locationName = locationName;
+    }
+    public void setLat(double lat) {
+        this.lat = lat;
+    }
 
     @Override
     public String toString() {
         return "Log{" +
                 "logId=" + logId +
                 ", logDate=" + logDate +
-                ", username='" + username + '\'' +
-                ", location=" + locationId +
+                ", username='" + user + '\'' +
+                ", locationId=" + locationId +
                 ", constellationList=" + constellationList +
                 ", extraInfo='" + extraInfo + '\'' +
+                ", locationName='" + locationName + '\'' +
+                ", lat=" + lat +
                 '}';
     }
 }

@@ -18,6 +18,7 @@ public final class UserMapper implements RowMapper<User> {
         user.setEmail(rs.getString("email"));
         user.setPremium(rs.getBoolean("premium"));
 
+
         return user;
 
     }
