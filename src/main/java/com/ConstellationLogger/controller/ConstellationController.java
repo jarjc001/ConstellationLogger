@@ -17,20 +17,8 @@ import java.util.List;
 @Controller
 public class ConstellationController {
 
-//    public Integer monthFiltered;   //the filter for month
-//    public Double latFiltered;      //the filter for latitude
-
-    @Autowired
-    ConstellationDao conDao;
-
     @Autowired
     ConstellationService conService;
-
-    @Autowired
-    LogDao logDao;
-
-    @Autowired
-    UserDao userDao;
 
     @GetMapping("constellations")
     public String  displayConstellations(Model model){
@@ -61,7 +49,6 @@ public class ConstellationController {
         Integer month;
         Double lat;
 
-
         try {
 
              month = Integer.parseInt(request.getParameter("month"));
@@ -75,27 +62,8 @@ public class ConstellationController {
              lat = null;
         }
 
-
-
-
-
-
-        //latFiltered = Double.parseDouble(request.getParameter("lat")); //add when we get the service filter method
-
         List<Constellation> cons = conService.ablyFilteredConstellations(month,lat);
 
-//        try {
-//            conService.MonthFiltered= Integer.parseInt(request.getParameter("month"));
-//            conService.latFiltered = Double.parseDouble(request.getParameter("lat"));
-//            conService.displayFilteredConstellations()
-//            cons = conDao.getConstellationByMonth(monthFiltered);
-//
-//        } catch (Exception  e) {     //in case of error, will just give the full list and clear filters
-//            monthFiltered = null;
-//            latFiltered = null;
-//            cons = conDao.getAllConstellations();
-//
-//        }
         model.addAttribute("constellations", cons);
         return "constellationsFilter";
 
