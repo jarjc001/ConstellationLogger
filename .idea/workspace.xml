@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="almost done Constellation, need to add lat filter">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="Constellation finished">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/ConstellationDaoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/ConstellationDaoDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/ConstellationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/ConstellationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/ConstellationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/ConstellationServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679517737531</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Constellation finished">
+      <created>1679522104456</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679522104456</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,21 +155,12 @@
     <MESSAGE value="UserDao added" />
     <MESSAGE value="finished dao" />
     <MESSAGE value="almost done Constellation, need to add lat filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="almost done Constellation, need to add lat filter" />
+    <MESSAGE value="Constellation finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Constellation finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java</url>
-          <line>84</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java</url>
-          <line>98</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/ConstellationServiceImpl.java</url>
           <line>41</line>
