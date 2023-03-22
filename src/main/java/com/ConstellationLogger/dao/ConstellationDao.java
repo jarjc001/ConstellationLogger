@@ -12,7 +12,7 @@ public interface ConstellationDao {
      * @param abbr Constellation's abbreviation
      * @return Constellation object
      */
-    Constellation getConstellationByAbbr (String abbr) throws DataBaseException;
+    Constellation getConstellationByAbbr (String abbr) ;
 
 
     /**Gets a List Constellation from its month
@@ -27,6 +27,14 @@ public interface ConstellationDao {
      * @return list of Constellation
      */
     List<Constellation> getConstellationByLat(double lat);
+
+    /**
+     * Get a list of Constellations based on its month and latitude
+     * @param lat latitude
+     * @param month month
+     * @return list of Constellation
+     */
+    public List<Constellation> getConstellationByLatAndMonth(double lat, int month);
 
     /**Gets a List of all Constellations
      * @return List of Constellations

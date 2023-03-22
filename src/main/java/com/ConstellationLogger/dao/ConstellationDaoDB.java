@@ -17,16 +17,13 @@ public class ConstellationDaoDB implements ConstellationDao {
 
 
     @Override
-    public Constellation getConstellationByAbbr(String abbr) throws DataBaseException {
+    public Constellation getConstellationByAbbr(String abbr) {
         Constellation con = new Constellation();
 
         //SQL query to get all Constellation with Abbr = abbr
         final String SELECT_CONSTELLATION_BY_ABBR = "SELECT * FROM constellations WHERE Abbr= ?";
         //returns Constellation objects
         con = jdbc.queryForObject(SELECT_CONSTELLATION_BY_ABBR, new ConstellationMapper(), abbr);
-        if(con == null){
-            throw new DataBaseException("Constellation not in DataBase");
-        }
         return con;
     }
 
@@ -46,6 +43,16 @@ public class ConstellationDaoDB implements ConstellationDao {
         //returns a List of Constellation objects
         return jdbc.query(SELECT_CONSTELLATION_BY_LAT, new ConstellationMapper(), lat,lat);
     }
+
+    @Override
+    public List<Constellation> getConstellationByLatAndMonth(double lat, int month) {
+        //SQL query to get all Constellation with a lat between maxLat and minLat
+        final String SELECT_CONSTELLATION_BY_LAT_AND_MONTH = "SELECT * FROM constellations" +
+                "WHERE (maxLat >= ?  AND    minLat <= ?) AND conMonth= ?";
+        //returns a List of Constellation objects
+        return jdbc.query(SELECT_CONSTELLATION_BY_LAT_AND_MONTH, new ConstellationMapper(), lat,lat, month);
+    }
+
 
     @Override
     public List<Constellation> getAllConstellations() {

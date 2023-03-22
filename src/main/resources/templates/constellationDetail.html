@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Constellation Logger</title>
+
+    <style>
+      hr {
+      width: 100%;
+        height: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #b7d0e2;
+      }
+
+      tr:hover {background-color: #D6EEEE;}
+
+
+
+
+
+    </style>
+</head>
+<body>
+<!-- Main Body of Page -->
+
+<div class="container">
+    <div class="row m-2">
+
+        <div class="col text-right m-100">
+            <a href="login" class="btn btn-outline-primary btn-lg">Login</a>
+            <a href="login" class="btn btn-outline-primary btn-lg">Create Account</a>
+        </div>
+
+
+    </div>
+    <hr/>
+    <div class="row m-1">
+        <div class="col text-center ">
+            <h1>Constellation Logger</h1>
+        </div>
+    </div>
+
+    <!--  main menu-->
+    <div class="row m-1">
+        <div class="col text-center m-1">
+            <a href="constellations" class="btn btn-outline-primary btn-lg">Constellations</a>
+        </div>
+        <div class="col text-center m-1">
+            <a href="logs" class="btn btn-outline-primary btn-lg">Logs</a>
+        </div>
+    </div>
+    <hr/>
+</div>
+
+<!--search options-->
+
+
+<!--display-->
+<div class="container">
+    <div class="text-center">
+        <div class="col text-center ">
+            <h2>Filter</h2>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <form action="constellationsFilter" method="GET">
+            <div class="form-group row">
+                <label for="month" class="col-1 col-form-label">
+                    Month</label>
+                <div class="col-4">
+                    <input type="number" name="month"
+                           id="month" placeholder="(ENTER 1 - 12)" class="form-control "/>
+                </div>
+            </div>
+            <!--                for the lat part-->
+            <div class="form-group row">
+                <label for="lat" class="col-1 col-form-label">
+                    Latitude</label>
+                <div class="col-4">
+                    <input type="text" name="lat"
+                           id="lat" placeholder="(ENTER 90 to -90)" class="form-control "/>
+                </div>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary ">Search</button>
+
+
+        </form>
+    </div>
+    <hr/>
+</div>
+
+<div class="container">
+
+
+    <div class="row m-2">
+        <!-- container for list -->
+        <div class="col text-left" style="text-align: left;">
+            <h2>Constellations</h2>
+
+            <div class="col text-center m-3">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Abbr</th>
+                        <th>Latin Name</th>
+                        <th>Details</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="con : ${constellations}">
+                        <td th:text="${con.abbr}">Abbr</td>
+                        <td th:text="${con.latinName}">Latin Name</td>
+                        <td>
+
+                            <a href="#" th:href="@{/constellationDetail(abbr=${con.abbr})}">Details</a>
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+        <!-- container for details -->
+        <div class="col text-left " style="text-align: left;">
+            <h2>Details</h2>
+            <div class="col text-center" style="text-align: left;">&nbsp;</div>
+
+            <dl>
+                <dt>Abbr</dt>
+                <dd class="col-10 text-left"><span th:text="${constellation.abbr}">Abbr</span></dd>
+
+                <dt>Latin Name</dt>
+                <dd class="col-10 text-left"><span th:text="${constellation.latinName}">Latin Name</span></dd>
+
+                <dt>English Name</dt>
+                <dd class="col-10 text-left"><span th:text="${constellation.englishName}">English Name</span></dd>
+
+                <dt>Most Likely Month</dt>
+                <dd class="col-10 text-left"><span th:text="${constellation.conMonth}">Most Likely Month</span></dd>
+
+                <dt>Maximum Latitude</dt>
+                <dd class="col-10 text-left"><span th:text="${constellation.maxLat}">Maximum Latitude</span></dd>
+
+                <dt>Minimum Latitude</dt>
+                <dd class="col-10 text-left"><span th:text="${constellation.minLat}">Minimum Latitude</span></dd>
+
+                <dt>Brightest Star</dt>
+                <dd class="col-10 text-left"><span th:text="${constellation.brightStar}">Brightest Star</span></dd>
+
+                <dt>Information</dt>
+                <dd class="col-10 text-left"><span th:text="${constellation.extraInfo}">Information</span></dd>
+
+
+            </dl>
+        </div>
+    </div>
+
+
+</div>
+
+
+<!-- End main body -->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+</html>;
+
