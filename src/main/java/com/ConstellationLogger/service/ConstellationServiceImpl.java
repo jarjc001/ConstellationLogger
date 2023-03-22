@@ -27,6 +27,8 @@ public class ConstellationServiceImpl implements ConstellationService{
 
     @Override
     public List<Constellation> getAllConstellations() {
+        monthFiltered = null;
+        latFiltered = null;
         return conDao.getAllConstellations();
     }
 
@@ -36,12 +38,33 @@ public class ConstellationServiceImpl implements ConstellationService{
     }
 
     @Override
-    public List<Constellation> getFilteredConstellations(Integer month, Double lat) {
-        List<Constellation> cons; //list to be displayed
+    public List<Constellation> displayFilteredConstellations() {
+        List<Constellation> cons = null; //list to be displayed
+        try {
 
+            if ((latFiltered != null) && (monthFiltered != null)) { //both filters on
+                cons=conDao.getConstellationByLatAndMonth(latFiltered,monthFiltered);
+            }else if(latFiltered != null){
+                cons=conDao.getConstellationByLat(latFiltered);
+            }else if(monthFiltered != null){
+                cons=conDao.getConstellationByMonth(monthFiltered);
+            }else{
+                cons = getAllConstellations();
+            }
+        } catch (Exception e) {
+//            monthFiltered = null;
+//            latFiltered = null;
+           // cons = getAllConstellations();
+        }
+        return cons;
+    }
 
+    @Override
+    public List<Constellation> ablyFilteredConstellations(Integer month, Double lat){
 
-
+        monthFiltered = month;
+        latFiltered = lat;
+        return displayFilteredConstellations();
 
     }
 }

@@ -22,11 +22,17 @@ public interface ConstellationService {
 
     /**
      * Get a list of Constellations based the filters given, or give a full list if no filters given
+     * @return list of Constellation objects
+     */
+    public List<Constellation> displayFilteredConstellations();
+
+    /**
+     * Changes the filters and gets the list of Constellations from it
      * @param month month of filter
      * @param lat latitude
      * @return list of Constellation objects
      */
-    public List<Constellation> getFilteredConstellations(Integer month, Double lat);
+    public List<Constellation> ablyFilteredConstellations(Integer month, Double lat);
 
 
 

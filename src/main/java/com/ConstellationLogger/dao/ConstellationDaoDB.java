@@ -38,19 +38,19 @@ public class ConstellationDaoDB implements ConstellationDao {
     @Override
     public List<Constellation> getConstellationByLat(double lat) {
         //SQL query to get all Constellation with a lat between maxLat and minLat
-        final String SELECT_CONSTELLATION_BY_LAT = "SELECT * FROM constellations" +
-                "WHERE (maxLat >= ?  AND    minLat <= ?)";
+        final String SELECT_CONSTELLATION_BY_LAT = "SELECT * FROM constellations " +
+                "WHERE ? BETWEEN minLat AND maxLat";
         //returns a List of Constellation objects
-        return jdbc.query(SELECT_CONSTELLATION_BY_LAT, new ConstellationMapper(), lat,lat);
+        return jdbc.query(SELECT_CONSTELLATION_BY_LAT, new ConstellationMapper(), lat);
     }
 
     @Override
     public List<Constellation> getConstellationByLatAndMonth(double lat, int month) {
         //SQL query to get all Constellation with a lat between maxLat and minLat
-        final String SELECT_CONSTELLATION_BY_LAT_AND_MONTH = "SELECT * FROM constellations" +
-                "WHERE (maxLat >= ?  AND    minLat <= ?) AND conMonth= ?";
+        final String SELECT_CONSTELLATION_BY_LAT_AND_MONTH = "SELECT * FROM constellations " +
+                "WHERE ((? BETWEEN minLat AND maxLat) AND conMonth= ?)";
         //returns a List of Constellation objects
-        return jdbc.query(SELECT_CONSTELLATION_BY_LAT_AND_MONTH, new ConstellationMapper(), lat,lat, month);
+        return jdbc.query(SELECT_CONSTELLATION_BY_LAT_AND_MONTH, new ConstellationMapper(), lat, month);
     }
 
 
