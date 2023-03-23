@@ -43,6 +43,19 @@ public class LogServiceImpl implements LogService{
     }
 
 
+
+    @Override
+    public Log getSingleLog(Integer logId){
+        Log log = new Log();
+        try {
+            log = logDao.getLogById(logId);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return log;
+    }
+
+
     @Override
     public List<Constellation> getAllConstellations(){
         return conService.getAllConstellations();
@@ -50,7 +63,10 @@ public class LogServiceImpl implements LogService{
 
 
     @Override
-    public void addNewUser(String dateString, String logLatString, String extraInfo, String[] conAbbrs){
+    public Log addNewLog(String dateString, String logLatString, String extraInfo, String[] conAbbrs){
+
+        //check if there are some iwth same date and lat
+
         Log newLog = new Log();
         Double logLat;
         LocalDate date;
@@ -59,7 +75,6 @@ public class LogServiceImpl implements LogService{
         //get lat in double form and adds it to newLog
         try {
             logLat = Double.parseDouble(logLatString);
-            newLog.setLogLat(logLat);
         }catch (Exception e){
             logLat = null;
         }
@@ -80,7 +95,9 @@ public class LogServiceImpl implements LogService{
 
         try {
             //adds rest of the parts to newLog
+
             newLog.setUser(currentUser);
+            newLog.setLogLat(logLat);
             newLog.setLogDate(date);
             newLog.setExtraInfo(extraInfo);
             newLog.setConstellationList(logCons);
@@ -94,6 +111,7 @@ public class LogServiceImpl implements LogService{
         }catch (DataBaseException e){
             System.out.println(e.getMessage());
         }
+        return newLog;
     }
 
 

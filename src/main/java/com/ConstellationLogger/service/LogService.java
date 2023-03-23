@@ -14,6 +14,12 @@ public interface LogService {
      */
     List<Log> getLogsForUser();
 
+    /**Get a single Log from its log ID
+     * @param logId log id
+     * @return log object
+     */
+    Log getSingleLog(Integer logId);
+
     /**Gets a list of all Constellations,
      * For drop down menus of constellations to add or edit a log
      * @return list of all constellations
@@ -27,5 +33,5 @@ public interface LogService {
      * @param extraInfo extra info
      * @param conAbbrs lift of Constellations abbrs
      */
-    void addNewUser(String date, String logLat, String extraInfo, String[] conAbbrs);
+    Log addNewLog(String date, String logLat, String extraInfo, String[] conAbbrs);
 }

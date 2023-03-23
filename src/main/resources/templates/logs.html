@@ -82,12 +82,12 @@
             <td th:text="${log.logLat}">Latitude</td>
             <td>
 
-              <a href="#" th:href="@{/logsDetail(abbr=${log.logId})}">Details</a>
+              <a href="#" th:href="@{/logsDetail(logId=${log.logId})}">Details</a>
 
             </td>
             <td>
 
-              <a href="#" th:href="@{/deleteLog(abbr=${log.logId})}">Delete</a>
+              <a href="#" th:href="@{/deleteLog(logId=${log.logId})}">Delete</a>
 
             </td>
           </tr>

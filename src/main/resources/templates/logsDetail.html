@@ -23,6 +23,7 @@
 
        tr:hover {background-color: #D6EEEE;}
 
+
     </style>
 </head>
 <body>
@@ -82,12 +83,12 @@
                         <td th:text="${log.logLat}">Latitude</td>
                         <td>
 
-                            <a href="#" th:href="@{/logsDetail(abbr=${log.logId})}">Details</a>
+                            <a href="#" th:href="@{/logsDetail(logId=${log.logId})}">Details</a>
 
                         </td>
                         <td>
 
-                            <a href="#" th:href="@{/deleteLog(abbr=${log.logId})}">Delete</a>
+                            <a href="#" th:href="@{/deleteLog(logId=${log.logId})}">Delete</a>
 
                         </td>
                     </tr>
@@ -100,75 +101,86 @@
 
     </div>
 
-
+    <hr/>
 </div>
-
 
 
 <div class="container">
 
-<!--    for details and to edit-->
+    <!--    for details and to edit-->
 
     <div class="row m-2">
-        <!-- container for editing -->
-<!--        <div class="col text-left" style="text-align: left;">-->
-<!--            <h2>Constellations</h2>-->
-
-<!--            <div class="col text-center m-3">-->
-<!--                <table class="table table-striped">-->
-<!--                    <thead>-->
-<!--                    <tr>-->
-<!--                        <th>Abbr</th>-->
-<!--                        <th>Latin Name</th>-->
-<!--                        <th>Details</th>-->
-<!--                    </tr>-->
-<!--                    </thead>-->
-<!--                    <tbody>-->
-<!--                    <tr th:each="con : ${constellations}">-->
-<!--                        <td th:text="${con.abbr}">Abbr</td>-->
-<!--                        <td th:text="${con.latinName}">Latin Name</td>-->
-<!--                        <td>-->
-
-<!--                            <a href="#" th:href="@{/constellationDetail(abbr=${con.abbr})}">Details</a>-->
-
-<!--                        </td>-->
-<!--                    </tr>-->
-<!--                    </tbody>-->
-<!--                </table>-->
-<!--            </div>-->
 
 
-<!--        </div>-->
+        <div class="col text-center m-3" style="text-align: left;">   <!--  col-[number] says the column location -->
+            <span class="h2">Edit Log</span>
 
-        <!-- container for details -->
-        <div class="col text-left " style="text-align: left;">
+            <div class="text-center m-3" style="text-align: left;">
+                <!--            <div class="col-7 text-center m-3" style="display:none;"> to hide it from the site-->
+                <form action="logsDetail" method="POST">
+                    <div class="form-group row">
+                        <label for="editLogDate" class="col-3 col-form-label">
+                            Date</label>
+                        <div class="col-9">
+                            <input type="date" name="editLogDate"
+                                   id="editLogDate" placeholder="Date" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="editLogLat" class="col-3 col-form-label">
+                            Latitude</label>
+                        <div class="col-9">
+                            <input type="text" name="editLogLat"
+                                   id="editLogLat" placeholder="Latitude" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="editConstellationList" class="col-3 col-form-label">
+                            Constellations</label>
+                        <div class="col-9">
+                            <select multiple id="editConstellationList" name="abbr"
+                                    class="form-control">
+                                <option th:each="con : ${constellations}"
+                                        th:value="${con.abbr}"
+                                        th:text="${con.abbr + ' - ' + con.latinName}">
+                                    Constellations
+                                </option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="editExtraInfo" class="col-3 col-form-label">
+                            Extra Info</label>
+                        <div class="col-9">
+                        <textarea type="text" name="editExtraInfo"
+                            id="editExtraInfo" placeholder="Extra Info" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary ">Edit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- details -->
+        <div class="col text-left m-3" style="text-align: left;">
             <h2>Details</h2>
             <div class="col text-center" style="text-align: left;">&nbsp;</div>
 
             <dl>
-                <dt>Abbr</dt>
-                <dd class="col-10 text-left"><span th:text="${constellation.abbr}">Abbr</span></dd>
+                <dt>Date</dt>
+                <dd class="col-10 text-left"><span th:text="${log.logDate}">Abbr</span></dd>
 
-                <dt>Latin Name</dt>
-                <dd class="col-10 text-left"><span th:text="${constellation.latinName}">Latin Name</span></dd>
+                <dt>Latitude</dt>
+                <dd class="col-10 text-left"><span th:text="${log.logLat}">Latitude</span></dd>
 
-                <dt>English Name</dt>
-                <dd class="col-10 text-left"><span th:text="${constellation.englishName}">English Name</span></dd>
-
-                <dt>Most Likely Month</dt>
-                <dd class="col-10 text-left"><span th:text="${constellation.conMonth}">Most Likely Month</span></dd>
-
-                <dt>Maximum Latitude</dt>
-                <dd class="col-10 text-left"><span th:text="${constellation.maxLat}">Maximum Latitude</span></dd>
-
-                <dt>Minimum Latitude</dt>
-                <dd class="col-10 text-left"><span th:text="${constellation.minLat}">Minimum Latitude</span></dd>
-
-                <dt>Brightest Star</dt>
-                <dd class="col-10 text-left"><span th:text="${constellation.brightStar}">Brightest Star</span></dd>
+                <dt>Constellations</dt>
+                <tr th:each="logCon : ${log.constellationList}" class="col-10 text-left">
+                    <dd class="col-10 text-left"><td th:text="${logCon.abbr + ' - ' + logCon.latinName}">Constellations</td></dd>
+                </tr>
 
                 <dt>Information</dt>
-                <dd class="col-10 text-left"><span th:text="${constellation.extraInfo}">Information</span></dd>
+                <dd class="col-10 text-left"><span th:text="${log.extraInfo}">Information</span></dd>
 
 
             </dl>
@@ -177,8 +189,6 @@
 
 
 </div>
-
-
 
 
 <!--New Log-->

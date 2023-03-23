@@ -4,28 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="account page not showing up, to do with contents">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/LogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/logs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/logsDetail.html" afterDir="false" />
+    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="finished add log">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/LogDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/LogDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/LogDaoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/LogDaoDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/LogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/LogMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dto/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dto/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dto/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/ConstellationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/ConstellationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/ConstellationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/ConstellationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/LogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/LogController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/constellationDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/constellationDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/constellations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/constellations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/constellationsFilter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/constellationsFilter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/log.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/logs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/logs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/logsDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/logsDetail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679546700373</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="finished add log">
+      <created>1679598342484</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1679598342484</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -209,21 +201,12 @@
     <MESSAGE value="Constellation finished" />
     <MESSAGE value="Login page finished" />
     <MESSAGE value="account page not showing up, to do with contents" />
-    <option name="LAST_COMMIT_MESSAGE" value="account page not showing up, to do with contents" />
+    <MESSAGE value="finished add log" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished add log" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java</url>
           <line>65</line>
