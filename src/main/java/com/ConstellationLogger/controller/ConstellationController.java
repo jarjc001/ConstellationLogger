@@ -44,7 +44,7 @@ public class ConstellationController {
     }
 
     @GetMapping("constellationsFilter")
-    public String constellationsMonth(HttpServletRequest request , Model model){
+    public String constellationsFilter(HttpServletRequest request , Model model){
 
         Integer month;
         Double lat;

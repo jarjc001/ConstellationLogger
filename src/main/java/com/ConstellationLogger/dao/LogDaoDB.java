@@ -53,7 +53,7 @@ public class LogDaoDB implements LogDao{
      * @return User linked to log
      */
     private User getUserForLog(int logId){
-        String SELECT_USER_FOR_LOG = "SELECT u.* FROM users u" +
+        String SELECT_USER_FOR_LOG = "SELECT u.* FROM users u " +
                 "JOIN log l ON l.username = u.username WHERE l.logId = ?";
         return jdbc.queryForObject(SELECT_USER_FOR_LOG, new UserMapper(), logId);
     }

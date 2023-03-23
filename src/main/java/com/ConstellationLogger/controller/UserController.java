@@ -4,15 +4,23 @@ import com.ConstellationLogger.dao.ConstellationDao;
 import com.ConstellationLogger.dao.LogDao;
 import com.ConstellationLogger.dao.UserDao;
 import com.ConstellationLogger.dto.User;
+import com.ConstellationLogger.service.UserService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.Objects;
 
 @Controller
 public class UserController {
 
-    protected User currentUser = new User();
+    @Autowired
+    UserService userService;
+
+
 
     @Autowired
     ConstellationDao conDao;
@@ -24,12 +32,48 @@ public class UserController {
     UserDao userDao;
 
     @GetMapping("login")
-    public void startLogin(){
+    public String startLogin(){
+        return "login";
     }
 
     @GetMapping("loginUser")
-    public String loginUser(Model model){
-        return null;
+    public String loginUser(HttpServletRequest request){
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+
+
+
+        userService.loginUser(username,password);
+
+
+
+        return "redirect:/";
+    }
+
+    @PostMapping("createUser")
+    public String createUser(HttpServletRequest request){
+        String username = request.getParameter("addedUsername");
+        String password = request.getParameter("addedPassword");
+        String email = request.getParameter("addedEmail");
+        String userFirstName = request.getParameter("addedFirstName");
+        String userLastName = request.getParameter("addedLastName");
+        boolean premium;
+        try {
+            premium = Boolean.parseBoolean(request.getParameter("addedPremium"));
+        }catch(Exception e){
+            premium = false;
+        }
+
+        userService.addUser(username,password,email,userFirstName,userLastName,premium);
+
+
+//        User newUser = new User();
+//        newUser.setUsername();
+//        newUser.setPassword();
+//        newUser.
+
+        return "redirect:/";
     }
 
 

@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Constellation Logger</title>
+    <title>Login</title>
 
     <style>
       hr {
@@ -27,7 +27,8 @@
     <div class="row m-2">
 
         <div class="col text-right m-100">
-
+            <a href="login" class="btn btn-outline-primary btn-lg">Login</a>
+            <a href="account" class="btn btn-outline-primary btn-lg">Account</a>
         </div>
 
 
@@ -35,7 +36,7 @@
     <hr />
     <div class="row m-1">
         <div class="col text-center ">
-            <h1 >Constellation Logger   yoooooooo</h1>
+            <h1 >Constellation Logger</h1>
         </div>
     </div>
 
@@ -46,6 +47,99 @@
         <div class="col text-center m-1">
             <a href="logs" class="btn btn-outline-primary btn-lg">Logs</a>
         </div>
+    </div>
+    <hr />
+</div>
+
+<!--log in-->
+
+<div class="container">
+<div class="text-center m-3">   <!--  col-[number] says the column location -->
+    <span class="h3">Login</span>
+</div>
+<div class="text-center m-3" >
+    <!--            <div class="col-7 text-center m-3" style="display:none;"> to hide it from the site-->
+    <form action="loginUser" method="GET">
+        <div class="form-group row">
+            <label for="username" class="col-3 col-form-label">
+                Username</label>
+            <div class="col-9">
+                <input type="text" name="username"
+                       id="username" placeholder="Username"  class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="password" class="col-3 col-form-label">
+                Password</label>
+            <div class="col-9">
+                <input type="password" name="password"
+                       id="password" placeholder="Password" class="form-control"/>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary ">Login</button>
+    </form>
+</div>
+    <hr />
+</div>
+
+<div class="container">
+    <div class="text-center m-3">   <!--  col-[number] says the column location -->
+        <span class="h3">Create New Account</span>
+    </div>
+    <div class="text-center m-3" >
+        <!--            <div class="col-7 text-center m-3" style="display:none;"> to hide it from the site-->
+        <form action="createUser" method="POST">
+            <div class="form-group row">
+                <label for="addedUsername" class="col-3 col-form-label">
+                    Username</label>
+                <div class="col-9">
+                    <input type="text" name="addedUsername"
+                           id="addedUsername" placeholder="Username"  class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="addedPassword" class="col-3 col-form-label">
+                    Password</label>
+                <div class="col-9">
+                    <input type="password" name="addedPassword"
+                           id="addedPassword" placeholder="Password" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="addedEmail" class="col-3 col-form-label">
+                    Email</label>
+                <div class="col-9">
+                    <input type="text" name="addedEmail"
+                           id="addedEmail" placeholder="Email"  class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="addedFirstName" class="col-3 col-form-label">
+                    First Name</label>
+                <div class="col-9">
+                    <input type="text" name="addedFirstName"
+                           id="addedFirstName" placeholder="First Name"  class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="addedLastName" class="col-3 col-form-label">
+                    Last Name</label>
+                <div class="col-9">
+                    <input type="text" name="addedLastName"
+                           id="addedLastName" placeholder="Last Name"  class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="addedPremium" class="col-3 col-form-label">
+                    Premium</label>
+                <div class="col-6">
+                    <input type="checkbox" id="addedPremium" name="addedPremium" value="true"/><br/>
+<!--                    <input type="text" name="addedPremium"-->
+<!--                           id="addedPremium" placeholder="Username"  class="form-control"/>-->
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary ">Login</button>
+        </form>
     </div>
     <hr />
 </div>

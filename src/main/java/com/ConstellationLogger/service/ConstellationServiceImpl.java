@@ -12,18 +12,14 @@ import java.util.List;
 @Component
 public class ConstellationServiceImpl implements ConstellationService{
 
-    public Integer monthFiltered;   //the filter for month
-    public Double latFiltered;      //the filter for latitude
+    /**The current filter for month*/
+    protected Integer monthFiltered;   //the filter for month
+    /**The current filter for latitude */
+    protected Double latFiltered;      //the filter for latitude
 
 
     @Autowired
     ConstellationDao conDao;
-
-    @Autowired
-    LogDao logDao;
-
-    @Autowired
-    UserDao userDao;
 
     @Override
     public List<Constellation> getAllConstellations() {
