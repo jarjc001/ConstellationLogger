@@ -32,7 +32,7 @@ public interface LogDao {
      * @param log new log
      * @return the log that was added to database
      */
-    Log addLog(Log log);
+    Log addLog(Log log) throws DataBaseException;
 
     /**Update a log in a database
      * @param log the log with the updated info

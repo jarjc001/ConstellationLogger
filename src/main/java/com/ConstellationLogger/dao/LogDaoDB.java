@@ -62,7 +62,7 @@ public class LogDaoDB implements LogDao{
 
     @Override
     public List<Log> getAllLogsOfUser(User user) {
-        final String SELECT_ALL_LOGS_OF_USER = "SELECT * FROM users WHERE username= ?";
+        final String SELECT_ALL_LOGS_OF_USER = "SELECT * FROM log WHERE username = ?";
         List<Log> logs = jdbc.query(SELECT_ALL_LOGS_OF_USER, new LogMapper(), user.getUsername());
         assignConstellationsAndUser(logs);
         return logs;
@@ -81,20 +81,24 @@ public class LogDaoDB implements LogDao{
 
     @Override
     @Transactional
-    public Log addLog(Log log) {
-        final String INSERT_LOG = "INSERT INTO log(logDate, locationName, Lat, extraInfo, username) " +
-                "VALUES(?, ?, ?, ?, ?)";
-        jdbc.update(INSERT_LOG,
-                log.getLogDate(),
-                log.getLocationName(),
-                log.getLat(),
-                log.getExtraInfo(),
-                log.getUser().getUsername());
-        //get the newly made id of the added log
-        int newId =jdbc.queryForObject("SELECT LAST_INSERT_ID()",Integer.class);
-        log.setLogId(newId);
-        //add the list of Constellations to the log in database
-        insertConstellationsLog(log);
+    public Log addLog(Log log) throws DataBaseException {
+        final String INSERT_LOG = "INSERT INTO log (logDate, Lat, extraInfo, username) " +
+                "VALUES (?, ?, ?, ?)";
+
+        try {
+            jdbc.update(INSERT_LOG,
+                    log.getLogDate(),
+                    log.getLogLat(),
+                    log.getExtraInfo(),
+                    log.getUser().getUsername());
+            //get the newly made id of the added log
+            int newId = jdbc.queryForObject("SELECT LAST_INSERT_ID()", Integer.class);
+            log.setLogId(newId);
+            //add the list of Constellations to the log in database
+            insertConstellationsLog(log);
+        }catch (Exception e){
+            throw new DataBaseException("Couldn't add Log", e);
+        }
         return log;
     }
 
@@ -115,13 +119,12 @@ public class LogDaoDB implements LogDao{
     @Override
     @Transactional
     public void updateLog(Log log) {
-        final String UPDATE_LOG = "UPDATE log SET logDate = ?, locationName = ?," +
+        final String UPDATE_LOG = "UPDATE log SET logDate = ?," +
                 " Lat = ?, extraInfo = ? WHERE logId = ?";
 
         jdbc.update(UPDATE_LOG,
                 log.getLogDate(),
-                log.getLocationName(),
-                log.getLat(),
+                log.getLogLat(),
                 log.getExtraInfo(),
                 log.getLogId());
         //delete old Constellations list and add a new one

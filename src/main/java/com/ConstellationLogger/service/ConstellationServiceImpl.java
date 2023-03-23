@@ -56,7 +56,22 @@ public class ConstellationServiceImpl implements ConstellationService{
     }
 
     @Override
-    public List<Constellation> ablyFilteredConstellations(Integer month, Double lat){
+    public List<Constellation> ablyFilteredConstellations(String monthString, String latString){
+
+        Integer month;
+        Double lat;
+
+        try {
+
+            month = Integer.parseInt(monthString);
+        }catch (Exception e){
+            month = null;
+        }
+        try {
+            lat = Double.parseDouble(latString);
+        }catch (Exception e){
+            lat = null;
+        }
 
         monthFiltered = month;
         latFiltered = lat;

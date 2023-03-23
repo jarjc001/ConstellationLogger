@@ -20,6 +20,8 @@ public class User {
     }
 
     public User() {
+        this.username = "";
+        this.password = "";
     }
 
     //getters

@@ -45,23 +45,8 @@ public class ConstellationController {
 
     @GetMapping("constellationsFilter")
     public String constellationsFilter(HttpServletRequest request , Model model){
-
-        Integer month;
-        Double lat;
-
-        try {
-
-             month = Integer.parseInt(request.getParameter("month"));
-        }catch (Exception e){
-             month = null;
-        }
-
-        try {
-             lat = Double.parseDouble(request.getParameter("lat"));
-        }catch (Exception e){
-             lat = null;
-        }
-
+             String month = request.getParameter("month");
+             String lat = request.getParameter("lat");
         List<Constellation> cons = conService.ablyFilteredConstellations(month,lat);
 
         model.addAttribute("constellations", cons);

@@ -56,99 +56,99 @@
 
 
 <!--user details-->
-<div class="container">
-    <div class="row m-2">
+<!--<div class="container">-->
+<!--    <div class="row m-2">-->
 
 
-        <div class="col text-center " style="text-align: left;">
-            <h2>Account Details</h2>
-            <div class="col text-center" style="text-align: left;">&nbsp;</div>
+<!--        <div class="col text-center " style="text-align: left;">-->
+<!--            <h2>Account Details</h2>-->
+<!--            <div class="col text-center" style="text-align: left;">&nbsp;</div>-->
 
-            <dl>
-                <dt>Username</dt>
-                <dd class="col text-center"><span th:text="${user.username}">username</span></dd>
+<!--            <dl>-->
+<!--                <dt>Username</dt>-->
+<!--                <dd class="col text-center"><span th:text="${user.username}">username</span></dd>-->
 
-                <dt>First Name</dt>
-                <dd class=" col text-center"><span th:text="${user.userFirstName}">userFirstName</span></dd>
+<!--                <dt>First Name</dt>-->
+<!--                <dd class=" col text-center"><span th:text="${user.userFirstName}">userFirstName</span></dd>-->
 
-                <dt>Last Name</dt>
-                <dd class="col text-center"><span th:text="${user.userLastName}">userLastName</span></dd>
+<!--                <dt>Last Name</dt>-->
+<!--                <dd class="col text-center"><span th:text="${user.userLastName}">userLastName</span></dd>-->
 
-                <dt>Email</dt>
-                <dd class="col text-center"><span th:text="${user.email}">email</span></dd>
-            </dl>
-            <a href="logoff" class="btn btn-primary">Logoff</a>
-        </div>
-
-
-
-
-
-        <div class="col text-center" style="text-align: center;">
-            <h2>Edit</h2>
-
-
-<!--edit account -->
-
-            <div class="text-center m-3" >
-                <!--            <div class="col-7 text-center m-3" style="display:none;"> to hide it from the site-->
-                <form action="editUser" method="POST">
-                    <div class="form-group row">
-                        <label for="editPassword" class="col-3 col-form-label">
-                            Password</label>
-                        <div class="col-9">
-                            <input type="password" name="editPassword"
-                                   id="editPassword" placeholder="Edit Password" class="form-control"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="editEmail" class="col-3 col-form-label">
-                            Email</label>
-                        <div class="col-9">
-                            <input type="text" name="editEmail"
-                                   id="editEmail" placeholder="Edit Email"  class="form-control"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="editFirstName" class="col-3 col-form-label">
-                            First Name</label>
-                        <div class="col-9">
-                            <input type="text" name="editFirstName"
-                                   id="editFirstName" placeholder="Edit First Name"  class="form-control"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="editLastName" class="col-3 col-form-label">
-                            Last Name</label>
-                        <div class="col-9">
-                            <input type="text" name="editLastName"
-                                   id="editLastName" placeholder="Edit Last Name"  class="form-control"/>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="editPremium" class="col-3 col-form-label">
-                            Premium</label>
-                        <div class="col-6">
-                            <input type="checkbox" id="editPremium" name="editPremium" value="true"/><br/>
-                            <!--                    <input type="text" name="addedPremium"-->
-                            <!--                           id="addedPremium" placeholder="Username"  class="form-control"/>-->
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary ">Edit Account</button>
-                    <a href="deleteUser" class="btn btn-primary">Delete Account</a>
-                </form>
-            </div>
+<!--                <dt>Email</dt>-->
+<!--                <dd class="col text-center"><span th:text="${user.email}">email</span></dd>-->
+<!--            </dl>-->
+<!--            <a href="logoff" class="btn btn-primary">Logoff</a>-->
+<!--        </div>-->
 
 
 
 
 
+<!--        <div class="col text-center" style="text-align: center;">-->
+<!--            <h2>Edit</h2>-->
 
 
-        </div>
+<!--&lt;!&ndash;edit account &ndash;&gt;-->
 
-    </div>
-</div>
+<!--            <div class="text-center m-3" >-->
+<!--                &lt;!&ndash;            <div class="col-7 text-center m-3" style="display:none;"> to hide it from the site&ndash;&gt;-->
+<!--                <form action="editUser" method="POST">-->
+<!--                    <div class="form-group row">-->
+<!--                        <label for="editPassword" class="col-3 col-form-label">-->
+<!--                            Password</label>-->
+<!--                        <div class="col-9">-->
+<!--                            <input type="password" name="editPassword"-->
+<!--                                   id="editPassword" placeholder="Edit Password" class="form-control"/>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group row">-->
+<!--                        <label for="editEmail" class="col-3 col-form-label">-->
+<!--                            Email</label>-->
+<!--                        <div class="col-9">-->
+<!--                            <input type="text" name="editEmail"-->
+<!--                                   id="editEmail" placeholder="Edit Email"  class="form-control"/>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group row">-->
+<!--                        <label for="editFirstName" class="col-3 col-form-label">-->
+<!--                            First Name</label>-->
+<!--                        <div class="col-9">-->
+<!--                            <input type="text" name="editFirstName"-->
+<!--                                   id="editFirstName" placeholder="Edit First Name"  class="form-control"/>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group row">-->
+<!--                        <label for="editLastName" class="col-3 col-form-label">-->
+<!--                            Last Name</label>-->
+<!--                        <div class="col-9">-->
+<!--                            <input type="text" name="editLastName"-->
+<!--                                   id="editLastName" placeholder="Edit Last Name"  class="form-control"/>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group row">-->
+<!--                        <label for="editPremium" class="col-3 col-form-label">-->
+<!--                            Premium</label>-->
+<!--                        <div class="col-6">-->
+<!--                            <input type="checkbox" id="editPremium" name="editPremium" value="true"/><br/>-->
+<!--                            &lt;!&ndash;                    <input type="text" name="addedPremium"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                           id="addedPremium" placeholder="Username"  class="form-control"/>&ndash;&gt;-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <button type="submit" class="btn btn-primary ">Edit Account</button>-->
+<!--                    <a href="deleteUser" class="btn btn-primary">Delete Account</a>-->
+<!--                </form>-->
+<!--            </div>-->
+
+
+
+
+
+
+
+<!--        </div>-->
+
+<!--    </div>-->
+<!--</div>-->
 
 <!-- End main body -->
 

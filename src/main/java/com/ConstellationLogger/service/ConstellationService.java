@@ -27,12 +27,13 @@ public interface ConstellationService {
     public List<Constellation> displayFilteredConstellations();
 
     /**
-     * Changes the filters and gets the list of Constellations from it
+     * Changes the filters and gets the list of Constellations from it.
+     * It takes in the Strings of the month and latitude, parse them into the right object.
      * @param month month of filter
      * @param lat latitude
      * @return list of Constellation objects
      */
-    public List<Constellation> ablyFilteredConstellations(Integer month, Double lat);
+    public List<Constellation> ablyFilteredConstellations(String monthString, String latString);
 
 
 

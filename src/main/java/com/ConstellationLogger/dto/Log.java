@@ -12,18 +12,16 @@ public class Log {
     private List<Constellation> constellationList;
     private String extraInfo;
 
-    private String locationName;
-    private double lat;
+    private double logLat;
 
 
-    public Log(int logId, LocalDate logDate, User user, int locationId, List<Constellation> constellationList, String extraInfo, String locationName, double lat) {
+    public Log(int logId, LocalDate logDate, User user, List<Constellation> constellationList, String extraInfo, double logLat) {
         this.logId = logId;
         this.logDate = logDate;
         this.user = user;
         this.constellationList = constellationList;
         this.extraInfo = extraInfo;
-        this.locationName = locationName;
-        this.lat = lat;
+        this.logLat = logLat;
     }
 
     public Log() {
@@ -46,11 +44,8 @@ public class Log {
     public String getExtraInfo() {
         return extraInfo;
     }
-    public String getLocationName() {
-        return locationName;
-    }
-    public double getLat() {
-        return lat;
+    public double getLogLat() {
+        return logLat;
     }
     //setters
 
@@ -70,11 +65,8 @@ public class Log {
     public void setExtraInfo(String extraInfo) {
         this.extraInfo = extraInfo;
     }
-    public void setLocationName(String locationName) {
-        this.locationName = locationName;
-    }
-    public void setLat(double lat) {
-        this.lat = lat;
+    public void setLogLat(double logLat) {
+        this.logLat = logLat;
     }
 
     @Override
@@ -83,10 +75,9 @@ public class Log {
                 "logId=" + logId +
                 ", logDate=" + logDate +
                 ", username='" + user + '\'' +
-                ", constellationList=" + constellationList +
-                ", extraInfo='" + extraInfo + '\'' +
-                ", locationName='" + locationName + '\'' +
-                ", lat=" + lat +
+                ", constellationList=" + constellationList + '\'' +
+                ", lat=" + logLat +
+                ", extraInfo='" + extraInfo +
                 '}';
     }
 }

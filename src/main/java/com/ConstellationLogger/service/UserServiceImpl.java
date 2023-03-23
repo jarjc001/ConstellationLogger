@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class UserServiceImpl implements UserService{
 
     /**Current user logged in to site */
-    protected User currentUser;
+    protected static User currentUser = new User();
 
     @Autowired
     ConstellationDao conDao;
@@ -34,8 +34,8 @@ public class UserServiceImpl implements UserService{
             }
 
             currentUser = userDao.getUserByLogin(username,password);
-        } catch (DataBaseException e) {
-            currentUser = null;
+        } catch (DataBaseException e) {     //if username or password wrong or empty
+            currentUser = new User();
             System.out.println(e.getMessage());
             //show that password or username is wrong
         }
@@ -62,8 +62,8 @@ public class UserServiceImpl implements UserService{
         try {
             userDao.addUser(newUser);
             currentUser = newUser;
-        } catch (DataBaseException e) {
-            currentUser = null;
+        } catch (DataBaseException e) {     //if any fields are empty or username is taken
+            currentUser = new User();
             System.out.println(e.getMessage());
         }
 
