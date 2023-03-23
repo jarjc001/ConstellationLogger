@@ -1,16 +1,17 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-  <title>Constellation Logger</title>
+    <title>Account</title>
 
-  <style>
+    <style>
       hr {
       width: 100%;
         height: 20px;
@@ -18,48 +19,150 @@
         margin-right: auto;
         background-color: #b7d0e2;
       }
+
+
     </style>
 </head>
 <body>
 <!-- Main Body of Page -->
 
 <div class="container">
-  <div class="row m-2">
+    <div class="row m-2">
 
-    <div class="col text-right m-100">
-      <a href="login" class="btn btn-outline-primary btn-lg">Login</a>
-      <a href="account" class="btn btn-outline-primary btn-lg">Account</a>
+        <div class="col text-right m-100">
+            <a href="login" class="btn btn-outline-primary btn-lg">Login</a>
+            <a href="account" class="btn btn-outline-primary btn-lg">Account</a>
+        </div>
+
+
+    </div>
+    <hr/>
+    <div class="row m-1">
+        <div class="col text-center ">
+            <h1>Constellation Logger</h1>
+        </div>
     </div>
 
-
-  </div>
-  <hr />
-  <div class="row m-1">
-    <div class="col text-center ">
-      <h1 >Constellation Logger</h1>
+    <div class="row m-1">
+        <div class="col text-center m-1">
+            <a href="constellations" class="btn btn-outline-primary btn-lg">Constellations</a>
+        </div>
+        <div class="col text-center m-1">
+            <a href="logs" class="btn btn-outline-primary btn-lg">Logs</a>
+        </div>
     </div>
-  </div>
-
-  <div class="row m-1">
-    <div class="col text-center m-1">
-      <a href="constellations" class="btn btn-outline-primary btn-lg">Constellations</a>
-    </div>
-    <div class="col text-center m-1">
-      <a href="logs" class="btn btn-outline-primary btn-lg">Logs</a>
-    </div>
-  </div>
-  <hr />
+    <hr/>
 </div>
 
 
+<!--user details-->
+<div class="container">
+    <div class="row m-2">
+
+
+        <div class="col text-center " style="text-align: left;">
+            <h2>Account Details</h2>
+            <div class="col text-center" style="text-align: left;">&nbsp;</div>
+
+            <dl>
+                <dt>Username</dt>
+                <dd class="col text-center"><span th:text="${user.username}">username</span></dd>
+
+                <dt>First Name</dt>
+                <dd class=" col text-center"><span th:text="${user.userFirstName}">userFirstName</span></dd>
+
+                <dt>Last Name</dt>
+                <dd class="col text-center"><span th:text="${user.userLastName}">userLastName</span></dd>
+
+                <dt>Email</dt>
+                <dd class="col text-center"><span th:text="${user.email}">email</span></dd>
+            </dl>
+            <a href="logoff" class="btn btn-primary">Logoff</a>
+        </div>
+
+
+
+
+
+        <div class="col text-center" style="text-align: center;">
+            <h2>Edit</h2>
+
+
+<!--edit account -->
+
+            <div class="text-center m-3" >
+                <!--            <div class="col-7 text-center m-3" style="display:none;"> to hide it from the site-->
+                <form action="editUser" method="POST">
+                    <div class="form-group row">
+                        <label for="editPassword" class="col-3 col-form-label">
+                            Password</label>
+                        <div class="col-9">
+                            <input type="password" name="editPassword"
+                                   id="editPassword" placeholder="Edit Password" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="editEmail" class="col-3 col-form-label">
+                            Email</label>
+                        <div class="col-9">
+                            <input type="text" name="editEmail"
+                                   id="editEmail" placeholder="Edit Email"  class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="editFirstName" class="col-3 col-form-label">
+                            First Name</label>
+                        <div class="col-9">
+                            <input type="text" name="editFirstName"
+                                   id="editFirstName" placeholder="Edit First Name"  class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="editLastName" class="col-3 col-form-label">
+                            Last Name</label>
+                        <div class="col-9">
+                            <input type="text" name="editLastName"
+                                   id="editLastName" placeholder="Edit Last Name"  class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="editPremium" class="col-3 col-form-label">
+                            Premium</label>
+                        <div class="col-6">
+                            <input type="checkbox" id="editPremium" name="editPremium" value="true"/><br/>
+                            <!--                    <input type="text" name="addedPremium"-->
+                            <!--                           id="addedPremium" placeholder="Username"  class="form-control"/>-->
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary ">Edit Account</button>
+                    <a href="deleteUser" class="btn btn-primary">Delete Account</a>
+                </form>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+</div>
 
 <!-- End main body -->
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
 </html>;
 

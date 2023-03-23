@@ -32,23 +32,19 @@ public class UserController {
     UserDao userDao;
 
     @GetMapping("login")
-    public String startLogin(){
+    public String displayLogin(){
         return "login";
     }
+
 
     @GetMapping("loginUser")
     public String loginUser(HttpServletRequest request){
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-
-
-
         userService.loginUser(username,password);
 
-
-
-        return "redirect:/";
+        return "redirect:";
     }
 
     @PostMapping("createUser")
@@ -67,14 +63,22 @@ public class UserController {
 
         userService.addUser(username,password,email,userFirstName,userLastName,premium);
 
-
-//        User newUser = new User();
-//        newUser.setUsername();
-//        newUser.setPassword();
-//        newUser.
-
-        return "redirect:/";
+        return "redirect:";
     }
+
+
+    @GetMapping("account")
+    public String displayAccount(){
+        ///make sure current acount doesnt crash it if it is null
+        return "account";
+    }
+
+
+    @PostMapping("editUser")
+    public String editUser(HttpServletRequest request, Model model){
+        return "redirect:/account";
+    }
+
 
 
 
