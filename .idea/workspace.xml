@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="tried to add Input Validation to login&#10;very messy and will need to be cleaned up">
+    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="presintation build&#10;fixed it to work login">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/LogDaoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/LogDaoDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/logs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/logs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/logsDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/logsDetail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679663564747</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="presintation build&#10;fixed it to work login">
+      <created>1679664247558</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1679664247558</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,7 +246,8 @@
     <MESSAGE value="finished base app&#10;completed log - CRUD done&#10;Added a way to stop people who haven't logged in to access logs" />
     <MESSAGE value="tried to add Input Validation to login&#10;very messy and will need to be cleaned up" />
     <MESSAGE value="Revert &quot;presintation build added logout&quot;&#10;&#10;This reverts commit cc30b052" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;presintation build added logout&quot;&#10;&#10;This reverts commit cc30b052" />
+    <MESSAGE value="presintation build&#10;fixed it to work login" />
+    <option name="LAST_COMMIT_MESSAGE" value="presintation build&#10;fixed it to work login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

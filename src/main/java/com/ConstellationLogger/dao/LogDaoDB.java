@@ -44,7 +44,8 @@ public class LogDaoDB implements LogDao{
      */
     private List<Constellation> getConstellationForLog(int logId){
         final String SELECT_CONSTELLATION_FOR_LOG = "SELECT c.* FROM constellations c " +
-                "JOIN constellationsLog cl ON cl.Abbr = c.Abbr WHERE cl.logId = ?";
+                "JOIN constellationsLog cl ON cl.Abbr = c.Abbr WHERE cl.logId = ? " +
+                "ORDER BY c.Abbr ASC";
         return jdbc.query(SELECT_CONSTELLATION_FOR_LOG, new ConstellationMapper(), logId);
     }
 
@@ -62,7 +63,8 @@ public class LogDaoDB implements LogDao{
 
     @Override
     public List<Log> getAllLogsOfUser(User user) {
-        final String SELECT_ALL_LOGS_OF_USER = "SELECT * FROM log WHERE username = ?";
+        final String SELECT_ALL_LOGS_OF_USER = "SELECT * FROM log WHERE username = ? " +
+                "ORDER BY logDate ASC";
         List<Log> logs = jdbc.query(SELECT_ALL_LOGS_OF_USER, new LogMapper(), user.getUsername());
         assignConstellationsAndUser(logs);
         return logs;
