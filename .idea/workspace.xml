@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="finished base app&#10;completed log - CRUD done&#10;Added a way to stop people who haven't logged in to access logs">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/LogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/LogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/UserDaoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/UserDaoDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dto/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dto/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dto/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-    </list>
+    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="tried to add Input Validation to login&#10;very messy and will need to be cleaned up" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -197,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679617814852</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="tried to add Input Validation to login&#10;very messy and will need to be cleaned up">
+      <created>1679625266091</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1679625266091</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,105 +218,41 @@
     <MESSAGE value="finished add log" />
     <MESSAGE value="display single log completed" />
     <MESSAGE value="finished base app&#10;completed log - CRUD done&#10;Added a way to stop people who haven't logged in to access logs" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished base app&#10;completed log - CRUD done&#10;Added a way to stop people who haven't logged in to access logs" />
+    <MESSAGE value="tried to add Input Validation to login&#10;very messy and will need to be cleaned up" />
+    <option name="LAST_COMMIT_MESSAGE" value="tried to add Input Validation to login&#10;very messy and will need to be cleaned up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/UserDaoDB.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/UserDaoDB.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="80" />
+          <line>28</line>
+          <option name="timeStamp" value="109" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/UserDaoDB.java</url>
           <line>27</line>
-          <option name="timeStamp" value="81" />
+          <option name="timeStamp" value="110" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/UserDaoDB.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="95" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="97" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="99" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="100" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="101" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="102" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="103" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="104" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="105" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="106" />
+          <line>26</line>
+          <option name="timeStamp" value="111" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/UserDaoDB.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="107" />
+          <line>25</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/UserDaoDB.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="113" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/UserDaoDB.java</url>
           <line>23</line>
-          <option name="timeStamp" value="108" />
+          <option name="timeStamp" value="115" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
