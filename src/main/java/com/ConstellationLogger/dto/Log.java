@@ -1,17 +1,24 @@
 package com.ConstellationLogger.dto;
 
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 import java.time.LocalDate;
 import java.util.List;
 
 public class Log {
 
     private int logId;
+    @NotNull(message = "Date must not be empty.")
     private LocalDate logDate;
+
+    @NotNull(message = "User must not be empty.")
     private User user;
 
     private List<Constellation> constellationList;
     private String extraInfo;
 
+    @NotNull(message = "Latitude must not be empty.")
     private double logLat;
 
 

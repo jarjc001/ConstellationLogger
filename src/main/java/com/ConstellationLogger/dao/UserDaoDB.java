@@ -1,6 +1,5 @@
 package com.ConstellationLogger.dao;
 
-import com.ConstellationLogger.dto.Constellation;
 import com.ConstellationLogger.dto.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -15,29 +14,27 @@ public class UserDaoDB implements UserDao{
     JdbcTemplate jdbc;
 
     @Override
-    public User getUserByLogin(String username, String password) throws DataBaseException {
-        User user = new User();
+    public User getUserByLogin(String username, String password, User user) throws DataBaseException {
+        User newUser = new User();
 
         //SQL query to get all Constellation with Abbr = abbr
         final String SELECT_USER_BY_USERNAME_AND_PASSWORD = "SELECT * FROM users WHERE (username= ? AND password= ?);";
         //returns Constellation objects
         try {
-            user = jdbc.queryForObject(SELECT_USER_BY_USERNAME_AND_PASSWORD, new UserMapper(), username, password);
-        }catch (DataAccessException e){
-            throw new DataBaseException("Login Details INCORRECT");
+            newUser = jdbc.queryForObject(SELECT_USER_BY_USERNAME_AND_PASSWORD, new UserMapper(), username, password);
+        }catch (DataAccessException e){ //will cause an error in html for incorrect password
+            newUser.setUsername(user.getUsername());
+            newUser.setPassword(null);
+            newUser.setUserFirstName("password");
+            newUser.setUserLastName("incorrect");
         }
-        return user;
+        return newUser;
     }
 
     @Override
-    public User addUser(User user) throws DataBaseException{
-        if(user == null){
-            throw new DataBaseException("Empty Tables For add User");
-        }
+    public User addUser(User user) {
 
         //checks if user is taken
-
-        checkUsernameInDataBase(user.getUsername());
 
         final String INSERT_USER = "INSERT INTO  users"+
                 "(username, password, userFirstName, userLastName, email, premium)" +
@@ -54,17 +51,19 @@ public class UserDaoDB implements UserDao{
     }
 
     @Override
-    public void checkUsernameInDataBase(String username) throws DataBaseException {
+    public boolean checkUsernameInDataBase(String username) {
         User user =new User();
         final String CHECK_USER_NAME = "SELECT * FROM users WHERE username = ?";
         try {
             user = jdbc.queryForObject(CHECK_USER_NAME, new UserMapper(), username);
-        }catch (DataAccessException e){
-            return;
+        }catch (DataAccessException e){ //Username free
+
+            return false;
         }
+        return true;    //Username already Taken
 
 
-        throw new DataBaseException("Username already Taken");
+
 
     }
 

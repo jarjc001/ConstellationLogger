@@ -5,9 +5,15 @@ import com.ConstellationLogger.dao.DataBaseException;
 import com.ConstellationLogger.dao.LogDao;
 import com.ConstellationLogger.dao.UserDao;
 import com.ConstellationLogger.dto.User;
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.Validation;
+import jakarta.validation.Validator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 public class UserServiceImpl implements UserService{
@@ -18,21 +24,31 @@ public class UserServiceImpl implements UserService{
     @Autowired
     UserDao userDao;
 
-
-
-
+    public static Set<ConstraintViolation<User>> violations = new HashSet<>();
 
     @Override
     public void loginUser(String username, String password){
+        violations.clear();
+        User newUser = new User();
         try {
+            newUser.setUsername(username);
 
-            if(username.equals("")){
-                username =null;
-            } else if (password.equals("")) {
-                password =null;
+            if(!userDao.checkUsernameInDataBase(username)){//checks if the username is correct
+                newUser.setUsername(null);
+                newUser.setPassword("Username");
+                newUser.setUserLastName("not");
+                newUser.setUserFirstName("correct");
             }
 
-            currentUser = userDao.getUserByLogin(username,password);
+
+            newUser = userDao.getUserByLogin(username,password,newUser);
+
+            Validator validate = Validation.buildDefaultValidatorFactory().getValidator();
+            violations = validate.validate(newUser);
+            if(!violations.isEmpty()) {
+                currentUser = newUser;
+            }
+
         } catch (DataBaseException e) {     //if username or password wrong or empty
             currentUser = new User();
             System.out.println(e.getMessage());
@@ -43,9 +59,8 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public void addUser(String username, String password, String email, String userFirstName, String userLastName, boolean premium){
+        violations.clear();
         User newUser = new User();
-
-
 
         newUser.setUsername(username);
         newUser.setPassword(password);
@@ -54,17 +69,34 @@ public class UserServiceImpl implements UserService{
         newUser.setUserLastName(userLastName);
         newUser.setPremium(premium);
 
+        //if any fields are empty, validate will flag it up and sent an error "All fields have to be filled in"
         if(username.equals("") | password.equals("") | email.equals("") | userFirstName.equals("") | userLastName.equals("")){
-            newUser = null;
+            newUser.setUsername("failed");
+            newUser.setPassword("input");
+            newUser.setUserFirstName("empty");
+            newUser.setUserLastName(null);
         }
 
-        try {
+        //if the username has already been taken
+        if(userDao.checkUsernameInDataBase(newUser.getUsername())){
+            newUser.setUsername("Username");
+            newUser.setPassword("already");
+            newUser.setUserLastName("taken");
+            newUser.setUserFirstName(null);
+        }
+
+        Validator validate = Validation.buildDefaultValidatorFactory().getValidator();
+        violations = validate.validate(newUser);
+
+
+
+        if(violations.isEmpty()) {
             userDao.addUser(newUser);
             currentUser = newUser;
-        } catch (DataBaseException e) {     //if any fields are empty or username is taken
+        }else {
             currentUser = new User();
-            System.out.println(e.getMessage());
         }
+
 
     }
 

@@ -1,11 +1,25 @@
 package com.ConstellationLogger.dto;
 
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 public class User {
 
+    @NotBlank(message = "Username Incorrect")
+
     private String username;
+    @NotBlank(message = "Password Incorrect")
     private String password;
+
+    @NotNull(message = "Username Taken")
     private String userFirstName;
+
+    @NotNull(message = "All fields have to be filled in")
     private String userLastName;
+
     private String email;
     private boolean premium;
 

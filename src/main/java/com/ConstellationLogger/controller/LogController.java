@@ -17,14 +17,6 @@ import java.util.List;
 
 @Controller
 public class LogController {
-    @Autowired
-    ConstellationDao conDao;
-
-    @Autowired
-    LogDao logDao;
-
-    @Autowired
-    UserDao userDao;
 
     @Autowired
     LogService logService;

@@ -21,6 +21,16 @@
     </style>
 </head>
 <body>
+
+
+
+<div class="col-12 m-1 text-center"
+     th:if="${!errors.isEmpty()}">
+    <p class="alert alert-danger" th:each="error : ${errors}"
+       th:text="${error.message}">Error message</p>
+</div>
+
+
 <!-- Main Body of Page -->
 
 <div class="container">

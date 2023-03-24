@@ -6,23 +6,37 @@ import com.ConstellationLogger.dao.UserDao;
 import com.ConstellationLogger.dto.User;
 import com.ConstellationLogger.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.validation.ConstraintViolation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
+
+import static com.ConstellationLogger.service.UserServiceImpl.violations;
 
 @Controller
 public class UserController {
+
+
+
 
     @Autowired
     UserService userService;
 
 
     @GetMapping("login")
-    public String displayLogin(){
+    public String displayLogin(Model model){
+
+
+
+        model.addAttribute("errors", violations);
+
+
         return "login";
     }
 
@@ -34,6 +48,9 @@ public class UserController {
 
         userService.loginUser(username,password);
 
+        if(!violations.isEmpty()) {
+            return "redirect:/login";
+        }
         return "redirect:";
     }
 
@@ -53,7 +70,12 @@ public class UserController {
 
         userService.addUser(username,password,email,userFirstName,userLastName,premium);
 
+        if(!violations.isEmpty()) {
+            return "redirect:/login";
+        }
         return "redirect:";
+
+
     }
 
 

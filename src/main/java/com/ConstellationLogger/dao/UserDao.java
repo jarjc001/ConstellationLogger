@@ -8,21 +8,22 @@ public interface UserDao {
      * Password has to be correct to get the user info
      * @param username username
      * @param password password
-     * @return the user info object
+     * @param user the user info object
      */
-    User getUserByLogin(String username, String password) throws DataBaseException;
+    User getUserByLogin(String username, String password, User user) throws DataBaseException;
 
     /**Add a new user to the database if the username is unique
      * @param user object with the info of new user
      * @return the user that has been added
      */
-    User addUser(User user) throws DataBaseException;
+    User addUser(User user) ;
 
-    /**Checks if the username has been taken in db
+    /**
+     * Checks if the username has been taken in db
      * @param username username
-     * @throws DataBaseException will return exception if the username is already in db
+     * @return true id username is already there, false if it is free to take
      */
-    public void checkUsernameInDataBase(String username) throws DataBaseException;
+    public boolean checkUsernameInDataBase(String username);
 
     /**Update info of a user in database
      * @param user user object with the edited info

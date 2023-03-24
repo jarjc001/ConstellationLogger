@@ -36,9 +36,21 @@ public interface LogService {
      */
     Log createNewLog(String date, String logLat, String extraInfo, String[] conAbbrs, Log newLog);
 
+    /**Add the log to the database
+     * @param dateString date as a String
+     * @param logLatString latitude as a String
+     * @param extraInfo extra info
+     * @param conAbbrs lift of Constellations abbrs
+     * @return the log that is being added to database
+     */
     Log addLogToDB(String dateString, String logLatString, String extraInfo, String[] conAbbrs);
 
-
+    /**Update a log and update the info in the database
+     * @param logId the Log id of the log being updated
+     * @param logLatString latitude as a String
+     * @param extraInfo extra info
+     * @param conAbbrs lift of Constellations abbrs
+     */
     void updateLogToDB(Integer logId, String dateString, String logLatString, String extraInfo, String[] conAbbrs);
 
     /**
