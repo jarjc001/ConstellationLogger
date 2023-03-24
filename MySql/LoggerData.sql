@@ -102,12 +102,14 @@ Row ("normalUser","password","normalfirstname","normalLastname","normalUser@mail
 
 SELECT * FROM users;
 
+
 insert INTO log(logDate, Lat, extraInfo, username)
 VALUES 
 ROW ('1982-12-12', 50, "premiumUser log" ,"premiumUser"),
 Row('1983-01-01', -30, "normalUser log" ,"normalUser");
 
 SELECT * FROM log;
+
 
 SELECT LAST_INSERT_ID();
 
@@ -116,6 +118,7 @@ select * from users WHERE username= "booby";
 SELECT cl.* FROM constellationslog cl ; 
 
 UPDATE users SET username = ?, password = ?, userFirstName = ?, userLastName = ?, email = ?, premium =?;
+
 
 
 SELECT * FROM constellations WHERE 70 BETWEEN minLat AND maxLat

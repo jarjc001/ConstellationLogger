@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="tried to add Input Validation to login&#10;very messy and will need to be cleaned up" />
+    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="tried to add Input Validation to login&#10;very messy and will need to be cleaned up">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/LoggerData.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/LoggerData.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation/Jarjat-ConstellationLogger-Presentation.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation/Jarjat-ConstellationLogger-Presentation.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagrams/drawSQL-constellation-logger-export-2023-03-23.png" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +25,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/MySql/data/dataToSqlStar" />
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -192,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679625266091</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="tried to add Input Validation to login&#10;very messy and will need to be cleaned up">
+      <created>1679625276735</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1679625276735</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
