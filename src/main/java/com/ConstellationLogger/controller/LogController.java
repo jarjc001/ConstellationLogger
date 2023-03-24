@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
+import static com.ConstellationLogger.service.LogServiceImpl.logViolations;
+
+
 @Controller
 public class LogController {
 
@@ -29,6 +32,8 @@ public class LogController {
         if(!logService.checkLoggedIn()){        //take them to login screen if they are not logged in
             return "redirect:/login";
         }
+
+        model.addAttribute("errors", logViolations);
 
         List<Log> logs = logService.getLogsForUser() ;
         List<Constellation> cons = logService.getAllConstellations();

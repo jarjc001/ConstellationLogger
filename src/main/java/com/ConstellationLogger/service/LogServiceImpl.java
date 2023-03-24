@@ -7,33 +7,37 @@ import com.ConstellationLogger.dao.UserDao;
 import com.ConstellationLogger.dto.Constellation;
 import com.ConstellationLogger.dto.Log;
 
+import com.ConstellationLogger.dto.User;
+import jakarta.validation.ConstraintViolation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static com.ConstellationLogger.service.UserServiceImpl.currentUser;
 
 @Service
 public class LogServiceImpl implements LogService{
 
-    @Autowired
-    ConstellationDao conDao;
+
 
     @Autowired
     LogDao logDao;
 
-    @Autowired
-    UserDao userDao;
 
     @Autowired
     ConstellationService conService;
 
     @Autowired
     UserService userService;
+
+    /**Input Violations*/
+    public static Set<ConstraintViolation<User>> logViolations = new HashSet<>();
 
 
     @Override
@@ -120,8 +124,11 @@ public class LogServiceImpl implements LogService{
 
     @Override
     public Log addLogToDB(String dateString, String logLatString, String extraInfo, String[] conAbbrs){
+        logViolations.clear();
         Log newLog = new Log();
         newLog = createNewLog(dateString, logLatString, extraInfo, conAbbrs, newLog);
+
+
         try {
             logDao.addLog(newLog);
         }catch (DataBaseException e){
@@ -132,6 +139,7 @@ public class LogServiceImpl implements LogService{
 
     @Override
     public void updateLogToDB(Integer logId, String dateString, String logLatString, String extraInfo, String[] conAbbrs){
+        logViolations.clear();
         Log newLog = new Log();
         newLog.setLogId(logId);
         newLog = createNewLog(dateString, logLatString, extraInfo, conAbbrs, newLog);

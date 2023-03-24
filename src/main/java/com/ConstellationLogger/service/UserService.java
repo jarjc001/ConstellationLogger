@@ -1,6 +1,10 @@
 package com.ConstellationLogger.service;
 
+import com.ConstellationLogger.dto.User;
+
 public interface UserService {
+
+
     /**
      * Gets the user info for a given username and password,
      * then sets the current user to the gotten user object.

@@ -18,9 +18,12 @@ public class UserServiceImpl implements UserService{
     /**Current user logged in to site */
     protected static User currentUser = new User();
 
+
+
     @Autowired
     UserDao userDao;
 
+    /**Input Violations*/
     public static Set<ConstraintViolation<User>> userViolations = new HashSet<>();
 
     @Override

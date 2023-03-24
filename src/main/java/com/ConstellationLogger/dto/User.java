@@ -9,17 +9,21 @@ import jakarta.validation.constraints.Size;
 public class User {
 
     @NotBlank(message = "Username Incorrect")
-
     private String username;
     @NotBlank(message = "Password Incorrect")
+    //@NotBlank(message = "Last name can not be empty")
     private String password;
 
     @NotNull(message = "Username Taken")
+   // @NotBlank(message = "First name can not be empty")
     private String userFirstName;
 
     @NotNull(message = "All fields have to be filled in")
+   // @NotBlank(message = "Last name can not be empty")
     private String userLastName;
 
+    @Email
+   // @NotBlank(message = "Email can not be empty")
     private String email;
     private boolean premium;
 
