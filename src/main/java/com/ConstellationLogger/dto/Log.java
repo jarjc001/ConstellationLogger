@@ -6,6 +6,7 @@ import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Objects;
 
 public class Log {
 
@@ -87,5 +88,18 @@ public class Log {
                 ", lat=" + logLat +
                 ", extraInfo='" + extraInfo +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Log log = (Log) o;
+        return logId == log.logId && Double.compare(log.logLat, logLat) == 0 && Objects.equals(logDate, log.logDate) && Objects.equals(user, log.user) && Objects.equals(constellationList, log.constellationList) && Objects.equals(extraInfo, log.extraInfo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(logId, logDate, user, constellationList, extraInfo, logLat);
     }
 }

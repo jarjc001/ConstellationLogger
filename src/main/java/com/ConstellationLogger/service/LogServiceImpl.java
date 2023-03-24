@@ -52,7 +52,6 @@ public class LogServiceImpl implements LogService{
     @Override
     public List<Log> getLogsForUser(){
         return logDao.getAllLogsOfUser(currentUser);
-
     }
 
 

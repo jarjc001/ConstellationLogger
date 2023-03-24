@@ -21,11 +21,11 @@ public class UserServiceImpl implements UserService{
     @Autowired
     UserDao userDao;
 
-    public static Set<ConstraintViolation<User>> violations = new HashSet<>();
+    public static Set<ConstraintViolation<User>> userViolations = new HashSet<>();
 
     @Override
     public void loginUser(String username, String password){
-        violations.clear();
+        userViolations.clear();
         User newUser = new User();
         try {
             newUser.setUsername(username);
@@ -41,8 +41,8 @@ public class UserServiceImpl implements UserService{
             newUser = userDao.getUserByLogin(username,password,newUser);
 
             Validator validate = Validation.buildDefaultValidatorFactory().getValidator();
-            violations = validate.validate(newUser);
-            if(violations.isEmpty()) {
+            userViolations = validate.validate(newUser);
+            if(userViolations.isEmpty()) {
                 currentUser = newUser;
             }
 
@@ -62,7 +62,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public void addUser(String username, String password, String email, String userFirstName, String userLastName, boolean premium){
-        violations.clear();
+        userViolations.clear();
         User newUser = new User();
 
         newUser.setUsername(username);
@@ -89,11 +89,11 @@ public class UserServiceImpl implements UserService{
         }
 
         Validator validate = Validation.buildDefaultValidatorFactory().getValidator();
-        violations = validate.validate(newUser);
+        userViolations = validate.validate(newUser);
 
 
 
-        if(violations.isEmpty()) {
+        if(userViolations.isEmpty()) {
             userDao.addUser(newUser);
             currentUser = newUser;
         }else {

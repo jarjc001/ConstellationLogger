@@ -1,5 +1,7 @@
 package com.ConstellationLogger.dto;
 
+import java.util.Objects;
+
 public class Constellation {
 
     private String abbr;
@@ -96,5 +98,18 @@ public class Constellation {
                 ", brightStar='" + brightStar + '\'' +
                 ", extraInfo='" + extraInfo + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Constellation that = (Constellation) o;
+        return conMonth == that.conMonth && Double.compare(that.maxLat, maxLat) == 0 && Double.compare(that.minLat, minLat) == 0 && Objects.equals(abbr, that.abbr) && Objects.equals(latinName, that.latinName) && Objects.equals(englishName, that.englishName) && Objects.equals(brightStar, that.brightStar) && Objects.equals(extraInfo, that.extraInfo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(abbr, latinName, englishName, conMonth, maxLat, minLat, brightStar, extraInfo);
     }
 }

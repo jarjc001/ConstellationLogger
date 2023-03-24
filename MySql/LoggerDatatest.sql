@@ -1,4 +1,4 @@
-USE constellationlogger;
+USE constellationloggertest;
 
 -- add into the constellations table
 INSERT INTO constellations (Abbr,latinName,englishName,conMonth,maxLat,minLat,brightStar)
