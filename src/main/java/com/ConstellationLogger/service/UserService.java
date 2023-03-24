@@ -15,6 +15,8 @@ public interface UserService {
      */
     void loginUser(String username, String password);
 
+    void logUserOut();
+
     /**
      *  Add a user to the database and then sets the current user into the new user.
      *  If any input is empty or the username is already in database,

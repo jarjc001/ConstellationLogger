@@ -1,15 +1,12 @@
 package com.ConstellationLogger.service;
 
-import com.ConstellationLogger.dao.ConstellationDao;
 import com.ConstellationLogger.dao.DataBaseException;
-import com.ConstellationLogger.dao.LogDao;
 import com.ConstellationLogger.dao.UserDao;
 import com.ConstellationLogger.dto.User;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -55,6 +52,12 @@ public class UserServiceImpl implements UserService{
             //show that password or username is wrong
         }
     }
+
+    @Override
+    public void logUserOut(){
+        currentUser = new User();
+    }
+
 
 
     @Override

@@ -32,12 +32,15 @@ public class UserController {
     @GetMapping("login")
     public String displayLogin(Model model){
 
-
-
         model.addAttribute("errors", violations);
 
-
         return "login";
+    }
+
+    @GetMapping("logout")
+    public String logout(){
+        userService.logUserOut();
+        return "redirect:/";
     }
 
 
