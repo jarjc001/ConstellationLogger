@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="presintation build&#10;fixed it to work login">
+    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="presintation build&#10;ordered sql">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/LogDaoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/LogDaoDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/logs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/logs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/logsDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/logsDetail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679664247558</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="presintation build&#10;ordered sql">
+      <created>1679665191453</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1679665191453</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,7 +251,8 @@
     <MESSAGE value="tried to add Input Validation to login&#10;very messy and will need to be cleaned up" />
     <MESSAGE value="Revert &quot;presintation build added logout&quot;&#10;&#10;This reverts commit cc30b052" />
     <MESSAGE value="presintation build&#10;fixed it to work login" />
-    <option name="LAST_COMMIT_MESSAGE" value="presintation build&#10;fixed it to work login" />
+    <MESSAGE value="presintation build&#10;ordered sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="presintation build&#10;ordered sql" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
