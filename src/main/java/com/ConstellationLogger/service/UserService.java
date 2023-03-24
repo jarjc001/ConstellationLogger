@@ -15,6 +15,8 @@ public interface UserService {
      */
     void loginUser(String username, String password);
 
+    /**Logs current user out
+     */
     void logUserOut();
 
     /**
