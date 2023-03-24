@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService{
 
             Validator validate = Validation.buildDefaultValidatorFactory().getValidator();
             violations = validate.validate(newUser);
-            if(!violations.isEmpty()) {
+            if(violations.isEmpty()) {
                 currentUser = newUser;
             }
 
