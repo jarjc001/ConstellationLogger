@@ -7,21 +7,20 @@ import com.ConstellationLogger.dao.UserDao;
 import com.ConstellationLogger.dto.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class UserServiceImpl implements UserService{
 
     /**Current user logged in to site */
     protected static User currentUser = new User();
 
     @Autowired
-    ConstellationDao conDao;
-
-    @Autowired
-    LogDao logDao;
-
-    @Autowired
     UserDao userDao;
+
+
+
+
 
     @Override
     public void loginUser(String username, String password){

@@ -21,16 +21,6 @@ public class UserController {
     UserService userService;
 
 
-
-    @Autowired
-    ConstellationDao conDao;
-
-    @Autowired
-    LogDao logDao;
-
-    @Autowired
-    UserDao userDao;
-
     @GetMapping("login")
     public String displayLogin(){
         return "login";
@@ -69,7 +59,6 @@ public class UserController {
 
     @GetMapping("account")
     public String displayAccount(){
-        ///make sure current acount doesnt crash it if it is null
         return "account";
     }
 

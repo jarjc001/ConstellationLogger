@@ -118,19 +118,23 @@ public class LogDaoDB implements LogDao{
 
     @Override
     @Transactional
-    public void updateLog(Log log) {
+    public void updateLog(Log log) throws DataBaseException {
         final String UPDATE_LOG = "UPDATE log SET logDate = ?," +
                 " Lat = ?, extraInfo = ? WHERE logId = ?";
 
-        jdbc.update(UPDATE_LOG,
-                log.getLogDate(),
-                log.getLogLat(),
-                log.getExtraInfo(),
-                log.getLogId());
-        //delete old Constellations list and add a new one
-        final String DELETE_CONSTELLATION_LOG = "DELETE FROM constellationsLog WHERE logId = ?";
-        jdbc.update(DELETE_CONSTELLATION_LOG,log.getLogId() );
-        insertConstellationsLog(log);
+        try {
+            jdbc.update(UPDATE_LOG,
+                    log.getLogDate(),
+                    log.getLogLat(),
+                    log.getExtraInfo(),
+                    log.getLogId());
+            //delete old Constellations list and add a new one
+            final String DELETE_CONSTELLATION_LOG = "DELETE FROM constellationsLog WHERE logId = ?";
+            jdbc.update(DELETE_CONSTELLATION_LOG, log.getLogId());
+            insertConstellationsLog(log);
+        }catch (Exception e){
+            throw new DataBaseException("Couldn't update Log", e);
+        }
 
     }
 

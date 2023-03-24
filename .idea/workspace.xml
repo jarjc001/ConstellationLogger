@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="finished add log">
+    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="display single log completed">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/LogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/LogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/LogDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/LogDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/LogDaoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/LogDaoDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/ConstellationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/ConstellationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/logs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/logs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/constellationDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/constellationDetail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/logsDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/logsDetail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679598342484</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="display single log completed">
+      <created>1679603767853</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1679603767853</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,20 +216,51 @@
     <MESSAGE value="Login page finished" />
     <MESSAGE value="account page not showing up, to do with contents" />
     <MESSAGE value="finished add log" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished add log" />
+    <MESSAGE value="display single log completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="display single log completed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java</url>
-          <line>65</line>
+          <line>64</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java</url>
-          <line>66</line>
+          <line>65</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogServiceImpl.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogServiceImpl.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogServiceImpl.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogServiceImpl.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogServiceImpl.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogServiceImpl.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="62" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

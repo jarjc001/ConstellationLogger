@@ -8,7 +8,7 @@ import com.ConstellationLogger.dto.Constellation;
 import com.ConstellationLogger.dto.Log;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -17,7 +17,7 @@ import java.util.List;
 
 import static com.ConstellationLogger.service.UserServiceImpl.currentUser;
 
-@Component
+@Service
 public class LogServiceImpl implements LogService{
 
     @Autowired
@@ -34,6 +34,16 @@ public class LogServiceImpl implements LogService{
 
     @Autowired
     UserService userService;
+
+
+    @Override
+    public boolean checkLoggedIn(){
+        if(currentUser.getUsername().equals("")){   //no one is logged in
+            return false;
+        }else {                     //is logged in
+            return true;
+        }
+    }
 
 
     @Override
@@ -63,11 +73,10 @@ public class LogServiceImpl implements LogService{
 
 
     @Override
-    public Log addNewLog(String dateString, String logLatString, String extraInfo, String[] conAbbrs){
+    public Log createNewLog(String dateString, String logLatString, String extraInfo, String[] conAbbrs, Log newLog){
 
         //check if there are some iwth same date and lat
 
-        Log newLog = new Log();
         Double logLat;
         LocalDate date;
         List<Constellation> logCons = new ArrayList<>();
@@ -106,12 +115,41 @@ public class LogServiceImpl implements LogService{
         }
 
 
+        return newLog;
+    }
+
+    @Override
+    public Log addLogToDB(String dateString, String logLatString, String extraInfo, String[] conAbbrs){
+        Log newLog = new Log();
+        newLog = createNewLog(dateString, logLatString, extraInfo, conAbbrs, newLog);
         try {
             logDao.addLog(newLog);
         }catch (DataBaseException e){
             System.out.println(e.getMessage());
         }
         return newLog;
+    }
+
+    @Override
+    public void updateLogToDB(Integer logId, String dateString, String logLatString, String extraInfo, String[] conAbbrs){
+        Log newLog = new Log();
+        newLog.setLogId(logId);
+        newLog = createNewLog(dateString, logLatString, extraInfo, conAbbrs, newLog);
+        try {
+            logDao.updateLog(newLog);
+        }catch (DataBaseException e){
+            System.out.println(e.getMessage());
+        }
+    }
+
+
+
+
+
+
+    @Override
+    public void removeLog(Integer logId){
+        logDao.deleteLog(logId);
     }
 
 

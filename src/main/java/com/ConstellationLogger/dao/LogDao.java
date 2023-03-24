@@ -37,7 +37,7 @@ public interface LogDao {
     /**Update a log in a database
      * @param log the log with the updated info
      */
-    void updateLog(Log log);
+    void updateLog(Log log) throws DataBaseException;
 
     /**Delete a log from the database
      * @param logId log id of log to be deleted

@@ -24,6 +24,10 @@
        tr:hover {background-color: #D6EEEE;}
 
 
+
+
+
+
     </style>
 </head>
 <body>
@@ -138,7 +142,7 @@
                         <label for="editConstellationList" class="col-3 col-form-label">
                             Constellations</label>
                         <div class="col-9">
-                            <select multiple id="editConstellationList" name="abbr"
+                            <select multiple id="editConstellationList" name="editAbbr"
                                     class="form-control">
                                 <option th:each="con : ${constellations}"
                                         th:value="${con.abbr}"
@@ -157,6 +161,7 @@
                             id="editExtraInfo" placeholder="Extra Info" class="form-control"></textarea>
                         </div>
                     </div>
+                    <input type="hidden" name="logId" th:value="${log.logId}"/>
                     <button type="submit" class="btn btn-primary ">Edit</button>
                 </form>
             </div>
@@ -175,12 +180,27 @@
                 <dd class="col-10 text-left"><span th:text="${log.logLat}">Latitude</span></dd>
 
                 <dt>Constellations</dt>
-                <tr th:each="logCon : ${log.constellationList}" class="col-10 text-left">
-                    <dd class="col-10 text-left"><td th:text="${logCon.abbr + ' - ' + logCon.latinName}">Constellations</td></dd>
+                <tbody class="col-10 text-left">
+<!--                <tr th:each="logCon : ${log.constellationList}" class="col-10 text-left">-->
+<!--                    <td th:text="${logCon.abbr + ' - ' + logCon.latinName}">Constellations</td>-->
+<!--                </tr>-->
+
+                <tr th:each="logCon : ${log.constellationList}" >
+                    <dd class="col-10 text-left">
+                    <td th:text="${logCon.abbr}">Abbr</td>
+                    <td th:text="${logCon.latinName}">Latin Name</td>
+                    <td>
+
+                        <a href="#" th:href="@{/constellationDetail(abbr=${logCon.abbr})}">Details</a>
+
+                    </td>
+                    </dd>
                 </tr>
 
-                <dt>Information</dt>
-                <dd class="col-10 text-left"><span th:text="${log.extraInfo}">Information</span></dd>
+                </tbody>
+
+                <dt>Extra Info</dt>
+                <dd class="col-10 text-left"><span th:text="${log.extraInfo}">Extra Info</span></dd>
 
 
             </dl>

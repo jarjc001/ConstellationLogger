@@ -1,12 +1,10 @@
 package com.ConstellationLogger.controller;
 
 import com.ConstellationLogger.dao.ConstellationDao;
-import com.ConstellationLogger.dao.DataBaseException;
 import com.ConstellationLogger.dao.LogDao;
 import com.ConstellationLogger.dao.UserDao;
 import com.ConstellationLogger.dto.Constellation;
 import com.ConstellationLogger.dto.Log;
-import com.ConstellationLogger.service.ConstellationService;
 import com.ConstellationLogger.service.LogService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +13,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -34,12 +29,15 @@ public class LogController {
     @Autowired
     LogService logService;
 
-    @Autowired
-    ConstellationService conService;
+
 
 
     @GetMapping("logs")
     public String displayLogs(Model model){
+        if(!logService.checkLoggedIn()){        //take them to login screen if they are not logged in
+            return "redirect:/login";
+        }
+
         List<Log> logs = logService.getLogsForUser() ;
         List<Constellation> cons = logService.getAllConstellations();
 
@@ -77,7 +75,7 @@ public class LogController {
 
         String[] conAbbrs = request.getParameterValues("abbr");
 
-        logService.addNewLog(date,logLat,extraInfo,conAbbrs);
+        logService.addLogToDB(date,logLat,extraInfo,conAbbrs);
 
         return "redirect:/logs";
 
@@ -86,8 +84,15 @@ public class LogController {
 
     @PostMapping("logsDetail")
     public String editLog(Integer logId, HttpServletRequest request){
+        String date = request.getParameter("editLogDate");
+        String logLat = request.getParameter("editLogLat");
+        String extraInfo = request.getParameter("editExtraInfo");
 
-        return "logsDetail";
+        String[] conAbbrs = request.getParameterValues("editAbbr");
+
+        logService.updateLogToDB(logId,date,logLat,extraInfo,conAbbrs);
+
+        return "redirect:/logs";
 
 
 
@@ -95,10 +100,8 @@ public class LogController {
 
     @GetMapping("deleteLog")
     public String deleteLog(Integer logId){
-        logDao.deleteLog(logId);
-
-
-        return "redirect:/conLogs";
+        logService.removeLog(logId);
+        return "redirect:/logs";
     }
 
 }

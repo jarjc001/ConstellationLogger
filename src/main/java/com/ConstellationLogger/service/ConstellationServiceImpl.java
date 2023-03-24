@@ -6,10 +6,11 @@ import com.ConstellationLogger.dao.UserDao;
 import com.ConstellationLogger.dto.Constellation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Component
+@Service
 public class ConstellationServiceImpl implements ConstellationService{
 
     /**The current filter for month*/
