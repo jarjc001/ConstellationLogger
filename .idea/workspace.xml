@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="added tests for log dao">
-      <change afterPath="$PROJECT_DIR$/diagrams/flowchart.png" afterDir="false" />
+    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="add image nearly">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/Placeholder.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/LoggerDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/LoggerDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/LoggerDBtest.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/LoggerDBtest.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/LoggerData.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/LoggerData.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/LoggerDatatest.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/LoggerDatatest.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/data/dataToSqlStar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/data/dataToSqlStar/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/data/dataToSqlStar/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/data/dataToSqlStar/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/data/dataToSqlStar/starData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/data/dataToSqlStar/starData.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/data/dataToSqlStar/starDatatxt.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/data/dataToSqlStar/starDatatxt.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stardata.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Stardata.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/ConstellationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/ConstellationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dto/Constellation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dto/Constellation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/constellationDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/constellationDetail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,10 +67,11 @@
       <recent name="C:\Users\theon\Documents\Important fouders\Wiley Edge Training\week 6 (Full Stack)\ConstellationLogger\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\theon\Documents\Important fouders\Wiley Edge Training\week 6 (Full Stack)\ConstellationLogger\src\main\resources\templates" />
-      <recent name="C:\Users\theon\Documents\Important fouders\Wiley Edge Training\week 6 (Full Stack)\ConstellationLogger\src\main\resources\templates\user" />
-      <recent name="C:\Users\theon\Documents\Important fouders\Wiley Edge Training\week 6 (Full Stack)\ConstellationLogger\src\main\resources\templates\constellation" />
       <recent name="C:\Users\theon\Documents\Important fouders\Wiley Edge Training\week 6 (Full Stack)\ConstellationLogger\src\main\resources\static" />
+      <recent name="C:\Users\theon\Documents\Important fouders\Wiley Edge Training\week 6 (Full Stack)\ConstellationLogger\src\main\resources\static\images" />
+      <recent name="C:\Users\theon\Documents\Important fouders\Wiley Edge Training\week 6 (Full Stack)\ConstellationLogger\src\main\resources\templates" />
+      <recent name="C:\Users\theon\Documents\Important fouders\Wiley Edge Training\week 6 (Full Stack)\ConstellationLogger\src\main\resources\images" />
+      <recent name="C:\Users\theon\Documents\Important fouders\Wiley Edge Training\week 6 (Full Stack)\ConstellationLogger\src\main\resources\templates\user" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.ConstellationLogger" />
@@ -342,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679674899219</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="add image nearly">
+      <created>1680708955242</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1680708955242</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -406,7 +405,8 @@
     <MESSAGE value="added logout" />
     <MESSAGE value="finihed presentation" />
     <MESSAGE value="added tests for log dao" />
-    <option name="LAST_COMMIT_MESSAGE" value="added tests for log dao" />
+    <MESSAGE value="add image nearly" />
+    <option name="LAST_COMMIT_MESSAGE" value="add image nearly" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -465,6 +465,26 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/LogDaoDB.java</url>
           <line>103</line>
           <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="132" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

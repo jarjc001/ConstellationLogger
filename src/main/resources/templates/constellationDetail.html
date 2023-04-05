@@ -145,7 +145,10 @@
 
             <dl>
 
-
+                <img  th:src="@{${constellation.imageUrl}}"
+                      alt="Picture of Constellation"
+                      width="500" height="500"
+                      th:title="${constellation.latinName}"/>
 
                 <dt>Abbr</dt>
                 <dd class="col-10 text-left"><span th:text="${constellation.abbr}">Abbr</span></dd>

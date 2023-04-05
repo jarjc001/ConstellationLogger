@@ -51,9 +51,6 @@ public class ConstellationController {
 
         model.addAttribute("constellations", cons);
         return "constellationsFilter";
-
-
-
     }
 
 
