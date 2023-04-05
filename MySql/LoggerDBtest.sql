@@ -28,7 +28,8 @@ CREATE TABLE constellations(
     maxLat DOUBLE NOT NULL,
     minLat DOUBLE NOT NULL,
     brightStar VARCHAR(20) NOT NULL,
-    extraInfo LONGTEXT NULL);
+    extraInfo LONGTEXT NULL,
+    image MEDIUMTEXT NOT NULL);
     
     -- related tables
     

@@ -18,6 +18,7 @@ public final class ConstellationMapper implements RowMapper<Constellation> {
         con.setMinLat(rs.getDouble("minLat"));
         con.setBrightStar(rs.getString("brightStar"));
         con.setExtraInfo(rs.getString("extraInfo"));
+        con.setImageUrl(rs.getString("image"));
         return con;
 
     }

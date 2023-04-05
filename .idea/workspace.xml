@@ -4,22 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="finihed presentation">
-      <change afterPath="$PROJECT_DIR$/MySql/LoggerDBtest.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MySql/LoggerDatatest.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/ConstellationLogger/TestLogDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="added tests for log dao">
+      <change afterPath="$PROJECT_DIR$/diagrams/flowchart.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/LoggerDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/LoggerDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/LoggerDBtest.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/LoggerDBtest.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MySql/LoggerData.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/LoggerData.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/LoggerDatatest.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/LoggerDatatest.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/data/dataToSqlStar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/data/dataToSqlStar/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/data/dataToSqlStar/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/data/dataToSqlStar/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/data/dataToSqlStar/starData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/data/dataToSqlStar/starData.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySql/data/dataToSqlStar/starDatatxt.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/data/dataToSqlStar/starDatatxt.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stardata.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Stardata.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/ConstellationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/ConstellationMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dto/Constellation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dto/Constellation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dto/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dto/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dto/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ConstellationLogger/ConstellationLoggerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/constellationDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/constellationDetail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,20 +56,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/theon/Documents/Important fouders/Wiley Edge Training/week 6 (Full Stack)/ConstellationLogger/src/test/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/theon/Documents/Important fouders/Wiley Edge Training/week 6 (Full Stack)/ConstellationLogger/MySql/data/dataToSqlStar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\theon\Documents\Important fouders\Wiley Edge Training\week 6 (Full Stack)\ConstellationLogger\src\test\resources" />
@@ -86,7 +85,7 @@
       <recent name="com.ConstellationLogger" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestLogDao">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ConstellationLogger.App" />
       <module name="ConstellationLogger" />
@@ -165,10 +164,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.TestLogDao" />
         <item itemvalue="JUnit.TestLogDao.testDeleteLog" />
         <item itemvalue="JUnit.TestLogDao.testAddLog" />
-        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.TestUserDao.contextLoads" />
       </list>
     </recent_temporary>
@@ -336,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679669647595</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added tests for log dao">
+      <created>1679674899219</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1679674899219</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -399,7 +405,8 @@
     <MESSAGE value="presintation build&#10;ordered sql" />
     <MESSAGE value="added logout" />
     <MESSAGE value="finihed presentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="finihed presentation" />
+    <MESSAGE value="added tests for log dao" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tests for log dao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

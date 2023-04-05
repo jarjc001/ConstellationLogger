@@ -12,11 +12,12 @@ public class Constellation {
     private double minLat;
     private String brightStar;
     private String extraInfo;
+    private String imageUrl;
 
 
     /**Construtor for mapping from database
      */
-    public Constellation(String abbr, String latinName, String englishName, int conMonth, double maxLat, double minLat, String brightStar) {
+    public Constellation(String abbr, String latinName, String englishName, int conMonth, double maxLat, double minLat, String brightStar, String imageUrl) {
         this.abbr = abbr;
         this.latinName = latinName;
         this.englishName = englishName;
@@ -24,6 +25,8 @@ public class Constellation {
         this.maxLat = maxLat;
         this.minLat = minLat;
         this.brightStar = brightStar;
+        //this.extraInfo = extraInfo;
+        this.imageUrl = imageUrl;
     }
 
     public Constellation() {
@@ -58,6 +61,7 @@ public class Constellation {
     public String getExtraInfo() {
         return this.extraInfo;
     }
+    public String getImageUrl(){return this.imageUrl;}
 
     //setters
     public void setAbbr(String abbr) {
@@ -84,7 +88,9 @@ public class Constellation {
     public void setExtraInfo(String extraInfo) {
         this.extraInfo = extraInfo;
     }
-
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 
     @Override
     public String toString() {
@@ -97,6 +103,7 @@ public class Constellation {
                 ", minLat=" + minLat +
                 ", brightStar='" + brightStar + '\'' +
                 ", extraInfo='" + extraInfo + '\'' +
+                ", imageUrl='"+ imageUrl + '\''+
                 '}';
     }
 
@@ -105,11 +112,11 @@ public class Constellation {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Constellation that = (Constellation) o;
-        return conMonth == that.conMonth && Double.compare(that.maxLat, maxLat) == 0 && Double.compare(that.minLat, minLat) == 0 && Objects.equals(abbr, that.abbr) && Objects.equals(latinName, that.latinName) && Objects.equals(englishName, that.englishName) && Objects.equals(brightStar, that.brightStar) && Objects.equals(extraInfo, that.extraInfo);
+        return conMonth == that.conMonth && Double.compare(that.maxLat, maxLat) == 0 && Double.compare(that.minLat, minLat) == 0 && Objects.equals(abbr, that.abbr) && Objects.equals(latinName, that.latinName) && Objects.equals(englishName, that.englishName) && Objects.equals(brightStar, that.brightStar) && Objects.equals(extraInfo, that.extraInfo) && Objects.equals(imageUrl, that.imageUrl);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(abbr, latinName, englishName, conMonth, maxLat, minLat, brightStar, extraInfo);
+        return Objects.hash(abbr, latinName, englishName, conMonth, maxLat, minLat, brightStar, extraInfo, imageUrl);
     }
 }
