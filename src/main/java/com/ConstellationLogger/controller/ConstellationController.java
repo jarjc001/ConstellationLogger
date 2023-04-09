@@ -20,13 +20,37 @@ public class ConstellationController {
     @Autowired
     ConstellationService conService;
 
-    @GetMapping("constellations")
-    public String  displayConstellations(Model model){
-        List<Constellation> cons = conService.getAllConstellations();
+    /**Displays the list of Constellations based on the current filters
+     * @param model model to send to html
+     * @param cons  the list of constellation objects tobe displayed
+     * @return the url
+     */
+    public String  displayConstellations(Model model, List<Constellation> cons){
+        //List<Constellation> cons = conService.getAllConstellations();
         model.addAttribute("constellations", cons);
+        model.addAttribute("monthFiltered",conService.getMonthFiltered());
+        model.addAttribute("latFiltered",conService.getLatFiltered());
         //set monthFiltered and lat fltered to zero;
         return "constellations";
 
+    }
+
+    /**
+     * Get all constellations
+     */
+    @GetMapping("constellations")
+    public String displayAllConstellations(Model model){
+        List<Constellation> cons = conService.getAllConstellations();
+        return displayConstellations(model, cons);
+    }
+
+    @GetMapping("constellationsFilter")
+    public String constellationsFilter(HttpServletRequest request , Model model){
+             String month = request.getParameter("month");
+             String lat = request.getParameter("lat");
+        List<Constellation> cons = conService.ablyFilteredConstellations(month,lat);
+
+        return displayConstellations(model,cons);
     }
 
 
@@ -37,21 +61,13 @@ public class ConstellationController {
 
         List<Constellation> cons = conService.displayFilteredConstellations(); //list to be displayed aswell
 
-        model.addAttribute("constellations", cons);
+        displayConstellations(model,cons);
 
         return "constellationDetail";
 
     }
 
-    @GetMapping("constellationsFilter")
-    public String constellationsFilter(HttpServletRequest request , Model model){
-             String month = request.getParameter("month");
-             String lat = request.getParameter("lat");
-        List<Constellation> cons = conService.ablyFilteredConstellations(month,lat);
 
-        model.addAttribute("constellations", cons);
-        return "constellationsFilter";
-    }
 
 
 

@@ -6,6 +6,11 @@ import java.util.List;
 
 public interface ConstellationService {
 
+
+    Integer getMonthFiltered();
+
+    Double getLatFiltered();
+
     /**
      * Gets the full list of Constellations from the DataBase
      * @return list of Constellation objects
@@ -29,8 +34,8 @@ public interface ConstellationService {
     /**
      * Changes the filters and gets the list of Constellations from it.
      * It takes in the Strings of the month and latitude, parse them into the right object.
-     * @param month month of filter
-     * @param lat latitude
+     * @param monthString month of filter
+     * @param latString latitude
      * @return list of Constellation objects
      */
     public List<Constellation> ablyFilteredConstellations(String monthString, String latString);

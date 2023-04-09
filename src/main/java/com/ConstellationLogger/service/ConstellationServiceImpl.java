@@ -1,11 +1,8 @@
 package com.ConstellationLogger.service;
 
 import com.ConstellationLogger.dao.ConstellationDao;
-import com.ConstellationLogger.dao.LogDao;
-import com.ConstellationLogger.dao.UserDao;
 import com.ConstellationLogger.dto.Constellation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +15,14 @@ public class ConstellationServiceImpl implements ConstellationService{
     /**The current filter for latitude */
     protected Double latFiltered;      //the filter for latitude
 
+    @Override
+    public Integer getMonthFiltered() {
+        return monthFiltered;
+    }
+    @Override
+    public Double getLatFiltered() {
+        return latFiltered;
+    }
 
     @Autowired
     ConstellationDao conDao;

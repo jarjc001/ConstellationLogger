@@ -7,107 +7,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="add image with placeholder">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/andromeda_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/antlia_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/apus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/aquarius_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/aquila_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ara_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/aries_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/auriga_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/bootes_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/caelum_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/camelopardalis_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/cancer_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/canes_venatici_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/canis_major_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/canis_minor_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/capricornus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/carina_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/cassiopeia_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/centaurus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/cepheus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/cetus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/chamaeleon_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/circinus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/columba_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/coma_berenices_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/corona_australis_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/corona_borealis_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/corvus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/crater_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/crux_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/cygnus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/delphinus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/dorado_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/draco_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/equuleus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/eridanus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/fornax_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/gemini_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/grus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/hercules_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/horologium_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/hydra_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/hydrus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/indus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/lacerta_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/leo_minor_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/leo_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/lepus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/libra_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/lupus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/lynx_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/lyra_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/mensa_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/microscopium_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/monoceros_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/musca_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/norma_star_constellation-1-1024x820-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/octans_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ophiuchus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/orion_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/pavo_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/pegasus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/perseus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/phoenix_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/pictor_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/pisces_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/piscis_austrinus_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/puppis_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/pyxis_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/reticulum_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/sagitta_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/sagittarius_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/scorpius_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/sculptor_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/scutum_star_constellation-1-1024x820-1-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/serpens_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/sextans_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/star_constellations_map_2048-1024x692-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/taurus_star_constellation-1-1024x820-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/telescopium_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/triangulum_australe_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/triangulum_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/tucana_star_constellation-1-1024x820-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ursa_major_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/ursa_minor_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/vela_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/virgo_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/volans_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/vulpecula_star_constellation-1-1024x820-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="added start pic">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/norma_star_constellation-1-1024x820-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/tucana_star_constellation-1-1024x820-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/LoggerData.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/LoggerData.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/LoggerDatatest.sql" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/LoggerDatatest.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MySql/data/dataToSqlStar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/data/dataToSqlStar/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/data/dataToSqlStar/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/data/dataToSqlStar/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/data/dataToSqlStar/starData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/data/dataToSqlStar/starData.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySql/data/dataToSqlStar/starDatatxt.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MySql/data/dataToSqlStar/starDatatxt.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Placeholder.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/Placeholder.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/ConstellationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/ConstellationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/ConstellationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/ConstellationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/norma_star_constellation-1-1024x820-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/tucana_star_constellation-1-1024x820-2.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/constellationDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/constellationDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/constellations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/constellations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/constellationsFilter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +66,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/theon/Documents/Important fouders/Wiley Edge Training/week 6 (Full Stack)/ConstellationLogger/MySql/data/dataToSqlStar",
+    "last_opened_file_path": "C:/Users/theon/Documents/Important fouders/Wiley Edge Training/week 6 (Full Stack)/ConstellationLogger",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -165,11 +79,11 @@
       <recent name="C:\Users\theon\Documents\Important fouders\Wiley Edge Training\week 6 (Full Stack)\ConstellationLogger\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\theon\Documents\Important fouders\Wiley Edge Training\week 6 (Full Stack)\ConstellationLogger\src\test" />
       <recent name="C:\Users\theon\Documents\Important fouders\Wiley Edge Training\week 6 (Full Stack)\ConstellationLogger\src\main\resources\static\images" />
       <recent name="C:\Users\theon\Documents\Important fouders\Wiley Edge Training\week 6 (Full Stack)\ConstellationLogger\src\main\resources\static" />
       <recent name="C:\Users\theon\Documents\Important fouders\Wiley Edge Training\week 6 (Full Stack)\ConstellationLogger\src\main\resources\templates" />
       <recent name="C:\Users\theon\Documents\Important fouders\Wiley Edge Training\week 6 (Full Stack)\ConstellationLogger\src\main\resources\images" />
-      <recent name="C:\Users\theon\Documents\Important fouders\Wiley Edge Training\week 6 (Full Stack)\ConstellationLogger\src\main\resources\templates\user" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.ConstellationLogger" />
@@ -446,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680712669487</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="added start pic">
+      <created>1680716417680</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1680716417681</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -512,7 +433,8 @@
     <MESSAGE value="added tests for log dao" />
     <MESSAGE value="add image nearly" />
     <MESSAGE value="add image with placeholder" />
-    <option name="LAST_COMMIT_MESSAGE" value="add image with placeholder" />
+    <MESSAGE value="added start pic" />
+    <option name="LAST_COMMIT_MESSAGE" value="added start pic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -571,26 +493,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/LogDaoDB.java</url>
           <line>103</line>
           <option name="timeStamp" value="126" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="129" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="130" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="131" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="132" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
