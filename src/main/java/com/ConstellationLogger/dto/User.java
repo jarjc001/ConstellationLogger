@@ -20,7 +20,6 @@ public class User {
    // @NotBlank(message = "First name can not be empty")
     private String userFirstName;
 
-    @NotNull(message = "All fields have to be filled in")
    // @NotBlank(message = "Last name can not be empty")
     private String userLastName;
 

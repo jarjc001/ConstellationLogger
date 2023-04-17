@@ -18,6 +18,11 @@ public class UserServiceImpl implements UserService{
     /**Current user logged in to site */
     protected static User currentUser = new User();
 
+    @Override
+    public User getCurrentUser() {
+        return currentUser;
+    }
+
     @Autowired
     UserDao userDao;
 
@@ -32,9 +37,8 @@ public class UserServiceImpl implements UserService{
 
             if(!userDao.checkUsernameInDataBase(username)){//checks if the username is correct
                 newUser.setUsername(null);
-                newUser.setPassword("Username");
-                newUser.setUserLastName("not");
-                newUser.setUserFirstName("correct");
+                newUser.setUserFirstName(" ");
+                newUser.setUserLastName(" ");
             }
 
 
@@ -72,35 +76,18 @@ public class UserServiceImpl implements UserService{
         newUser.setUserLastName(userLastName);
         newUser.setPremium(premium);
 
-        //if any fields are empty, validate will flag it up and sent an error "All fields have to be filled in"
-        if(username.equals("") | password.equals("") | email.equals("") | userFirstName.equals("") | userLastName.equals("")){
-            newUser.setUsername("failed");
-            newUser.setPassword("input");
-            newUser.setUserFirstName("empty");
-            newUser.setUserLastName(null);
-        }
-
         //if the username has already been taken
         if(userDao.checkUsernameInDataBase(newUser.getUsername())){
-            newUser.setUsername("Username");
-            newUser.setPassword("already");
-            newUser.setUserLastName("taken");
             newUser.setUserFirstName(null);
         }
 
         Validator validate = Validation.buildDefaultValidatorFactory().getValidator();
         userViolations = validate.validate(newUser);
 
-
-
         if(userViolations.isEmpty()) {
             userDao.addUser(newUser);
-            currentUser = newUser;
-        }else {
-            currentUser = new User();
         }
-
-
+        currentUser = newUser;
     }
 
 

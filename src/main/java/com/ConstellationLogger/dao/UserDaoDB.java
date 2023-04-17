@@ -25,8 +25,8 @@ public class UserDaoDB implements UserDao{
         }catch (DataAccessException e){ //will cause an error in html for incorrect password
             newUser.setUsername(user.getUsername());
             newUser.setPassword(null);
-            newUser.setUserFirstName("password");
-            newUser.setUserLastName("incorrect");
+            newUser.setUserFirstName(" ");
+            newUser.setUserLastName(" ");
         }
         return newUser;
     }

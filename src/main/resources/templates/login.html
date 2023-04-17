@@ -107,7 +107,7 @@
                     Username</label>
                 <div class="col-9">
                     <input type="text" name="addedUsername"
-                           id="addedUsername" placeholder="Username"  class="form-control"/>
+                           id="addedUsername" placeholder="Username"  class="form-control" th:value="${currentUser.username}" required/>
                 </div>
             </div>
             <div class="form-group row">
@@ -115,7 +115,7 @@
                     Password</label>
                 <div class="col-9">
                     <input type="password" name="addedPassword"
-                           id="addedPassword" placeholder="Password" class="form-control"/>
+                           id="addedPassword" placeholder="Password" class="form-control" required/>
                 </div>
             </div>
             <div class="form-group row">
@@ -123,7 +123,7 @@
                     Email</label>
                 <div class="col-9">
                     <input type="text" name="addedEmail"
-                           id="addedEmail" placeholder="Email"  class="form-control"/>
+                           id="addedEmail" placeholder="Email"  class="form-control" th:value="${currentUser.email}" required/>
                 </div>
             </div>
             <div class="form-group row">
@@ -131,7 +131,7 @@
                     First Name</label>
                 <div class="col-9">
                     <input type="text" name="addedFirstName"
-                           id="addedFirstName" placeholder="First Name"  class="form-control"/>
+                           id="addedFirstName" placeholder="First Name"  class="form-control" th:value="${currentUser.userFirstName}" required/>
                 </div>
             </div>
             <div class="form-group row">
@@ -139,7 +139,7 @@
                     Last Name</label>
                 <div class="col-9">
                     <input type="text" name="addedLastName"
-                           id="addedLastName" placeholder="Last Name"  class="form-control"/>
+                           id="addedLastName" placeholder="Last Name"  class="form-control" th:value="${currentUser.userFirstName}" required/>
                 </div>
             </div>
             <div class="form-group row">

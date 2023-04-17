@@ -22,6 +22,7 @@ public class UserController {
 
     @GetMapping("login")
     public String displayLogin(Model model){
+        model.addAttribute("currentUser",userService.getCurrentUser());
 
         model.addAttribute("errors", userViolations);
 
@@ -81,6 +82,11 @@ public class UserController {
 
     @PostMapping("editUser")
     public String editUser(HttpServletRequest request, Model model){
+        return "redirect:/account";
+    }
+
+    @GetMapping("deleteUser")
+    public String deleteUser(Integer logId){
         return "redirect:/account";
     }
 

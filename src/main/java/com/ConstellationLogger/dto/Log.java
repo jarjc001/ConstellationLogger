@@ -11,16 +11,16 @@ import java.util.Objects;
 public class Log {
 
     private int logId;
-    @NotBlank(message = "Date must not be empty.")
+
     private LocalDate logDate;
 
-    @NotBlank(message = "User must not be empty.")
+
     private User user;
 
     private List<Constellation> constellationList;
     private String extraInfo;
 
-    @NotBlank(message = "Latitude must not be empty.")
+
     private double logLat;
 
 

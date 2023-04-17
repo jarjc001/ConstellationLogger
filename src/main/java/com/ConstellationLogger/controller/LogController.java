@@ -79,7 +79,7 @@ public class LogController {
     }
 
 
-    @PostMapping("logsDetail")
+    @PostMapping("editLog")
     public String editLog(Integer logId, HttpServletRequest request){
         String date = request.getParameter("editLogDate");
         String logLat = request.getParameter("editLogLat");
@@ -90,8 +90,6 @@ public class LogController {
         logService.updateLogToDB(logId,date,logLat,extraInfo,conAbbrs);
 
         return "redirect:/logs";
-
-
 
     }
 
