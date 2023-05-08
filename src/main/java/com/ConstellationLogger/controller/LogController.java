@@ -25,8 +25,11 @@ public class LogController {
     LogService logService;
 
 
-
-
+    /**
+     * Displays the logs of the current, logged-in user. If the user is not logged-in,
+     * it will redirect the user to the login page
+     * @param model model
+     */
     @GetMapping("logs")
     public String displayLogs(Model model){
         if(!logService.checkLoggedIn()){        //take them to login screen if they are not logged in
@@ -44,7 +47,10 @@ public class LogController {
 
     }
 
-
+    /**The details of the chosen log
+     * @param logId the id of the chosen log
+     * @param model model
+     */
     @GetMapping("logsDetail")
     public String logsDetail(Integer logId, Model model) {
 
@@ -62,8 +68,10 @@ public class LogController {
     }
 
 
-
-
+    /**
+     * Creates a new log for the current, logged-in user.
+     * @param request HttpServletRequest
+     */
     @PostMapping("createLog")
     public String createLog(HttpServletRequest request){
         String date = request.getParameter("logDate");
@@ -78,7 +86,10 @@ public class LogController {
 
     }
 
-
+    /**Edits the chosen log for the current, logged-in user.
+     * @param logId the id of the chosen log
+     * @param request HttpServletRequest
+     */
     @PostMapping("editLog")
     public String editLog(Integer logId, HttpServletRequest request){
         String date = request.getParameter("editLogDate");
@@ -93,6 +104,10 @@ public class LogController {
 
     }
 
+    /**
+     * Delete the chosen log
+     * @param logId the id of the chosen log
+     */
     @GetMapping("deleteLog")
     public String deleteLog(Integer logId){
         logService.removeLog(logId);

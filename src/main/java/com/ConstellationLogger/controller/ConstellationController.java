@@ -36,7 +36,7 @@ public class ConstellationController {
     }
 
     /**
-     * Get all constellations
+     * Get all constellations as a list
      */
     @GetMapping("constellations")
     public String displayAllConstellations(Model model){
@@ -44,6 +44,11 @@ public class ConstellationController {
         return displayConstellations(model, cons);
     }
 
+    /**
+     * Get all the constellations based on a set filter: the latitude and the month, as a list
+     * @param request HttpServletRequest
+     * @param model model
+     */
     @GetMapping("constellationsFilter")
     public String constellationsFilter(HttpServletRequest request , Model model){
              String month = request.getParameter("month");
@@ -53,7 +58,11 @@ public class ConstellationController {
         return displayConstellations(model,cons);
     }
 
-
+    /**
+     * Gets the details of the chosen constellation, including its picture.
+     * @param abbr the constellation's abbr
+     * @param model model
+     */
     @GetMapping("constellationDetail")
     public String constellationDetail(String abbr, Model model){
         Constellation con = conService.getSingleConstellation(abbr);

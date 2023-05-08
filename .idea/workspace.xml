@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="javadoc">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/ServiceLayerException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/deleteUser.html" afterDir="false" />
+    <list default="true" id="ab2f91a0-db6d-4ac7-bb37-2806d90b678a" name="Changes" comment="added the edit and delete user functions&#10;Created a sep page for delete user, have to login again to delete the account">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/UserDaoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/UserDaoDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dto/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/LogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/ConstellationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/LogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/LogController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -374,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681746790086</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="added the edit and delete user functions&#10;Created a sep page for delete user, have to login again to delete the account">
+      <created>1683580362222</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1683580362222</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -443,7 +443,8 @@
     <MESSAGE value="added start pic" />
     <MESSAGE value="made html files more streamlined &#10;existing data in form of filters" />
     <MESSAGE value="javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="javadoc" />
+    <MESSAGE value="added the edit and delete user functions&#10;Created a sep page for delete user, have to login again to delete the account" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the edit and delete user functions&#10;Created a sep page for delete user, have to login again to delete the account" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -492,31 +493,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/dao/LogDaoDB.java</url>
           <line>103</line>
           <option name="timeStamp" value="126" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/UserController.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="131" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/UserController.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="132" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/UserController.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="133" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/UserController.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="134" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ConstellationLogger/controller/UserController.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="135" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
