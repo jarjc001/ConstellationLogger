@@ -42,11 +42,7 @@ public class LogServiceImpl implements LogService{
 
     @Override
     public boolean checkLoggedIn(){
-        if(currentUser.getUsername().equals("")){   //no one is logged in
-            return false;
-        }else {                     //is logged in
-            return true;
-        }
+        return userService.checkLoggedIn();
     }
 
     @Override

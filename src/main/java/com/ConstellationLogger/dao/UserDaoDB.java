@@ -57,13 +57,9 @@ public class UserDaoDB implements UserDao{
         try {
             user = jdbc.queryForObject(CHECK_USER_NAME, new UserMapper(), username);
         }catch (DataAccessException e){ //Username free
-
             return false;
         }
         return true;    //Username already Taken
-
-
-
 
     }
 

@@ -10,9 +10,9 @@ import java.util.Objects;
 
 public class User {
 
-    @NotBlank(message = "Username Incorrect")
+    @NotNull(message = "Username Incorrect")
     private String username;
-    @NotBlank(message = "Password Incorrect")
+    @NotNull(message = "Password Incorrect")
     //@NotBlank(message = "Last name can not be empty")
     private String password;
 
