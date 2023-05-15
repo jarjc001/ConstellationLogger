@@ -2,26 +2,13 @@
 6th week Assessment for Wiley Edge Java course
 Will create a web-based application using tools and skills learned throughout the course and present the project to the rest of the class when the project is complete.
 
-General Instructions
 
-The application must be business-oriented and/or address issues to solve a business-related problem.
-
-Suggestions include, but are not limited to:
-
-    An app that encourages people to adopt pets
-    An app that tracks planes for an airlines
-    An app that visually tracks mass transit (buses) in a city. (Google Maps API)
-    An app that tracks cars for a rental agency
-    An app that tracks traffic accidents in a major city
-    An app that tracks projects such as Habitat for Humanity builds
-    An app that helps run a doctor’s office (patient visits/scheduling)
-    An app that tracks portfolio investments (E-Trade)
-    An app that uses a shopping cart (e-commerce)
-    
-For mine, I will create a Constellations logger web app. It will:
+I will create a Constellations logger web app. It will:
 •	Able to search and filter Constellations based on Month and Latitude from a database of Constellations
 •	Able to Create, Modify and view Logs of Constellations
 •	Have multiple users that can only access their Logs
+
+
 
 
 Requirements
