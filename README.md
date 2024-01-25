@@ -1,5 +1,5 @@
 # ConstellationLogger
-6th week Assessment for Wiley Edge Java course
+6th Assessment for Wiley Edge Java course
 Will create a web-based application using tools and skills learned throughout the course and present the project to the rest of the class when the project is complete.
 
 
